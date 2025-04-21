@@ -1,0 +1,49 @@
+#!/bin/bash
+export KUBECONFIG=$2
+INGRESS_NAME="node-red-ingress"
+NAMESPACE="default"
+
+#echo "Enter the hostname to remove:"
+#read HOST_TO_REMOVE
+HOST_TO_REMOVE=$1
+SERVICE_TO_REMOVE="$(echo "${HOST_TO_REMOVE}" | tr '[:upper:]' '[:lower:]' | tr '.' '-')"
+
+# Remove service
+kubectl delete service $SERVICE_TO_REMOVE -n $NAMESPACE
+
+# Remove ingress rule
+HOST_INDEX=$(kubectl get ingress $INGRESS_NAME -n $NAMESPACE -o json | jq -r --arg host "$HOST_TO_REMOVE" '.spec.rules | map(.host == $host) | index(true)')
+TLS_INDEX=$(kubectl get ingress $INGRESS_NAME -n $NAMESPACE -o json | jq -r --arg host "$HOST_TO_REMOVE" '.spec.tls | map(.hosts[0] == $host) | index(true)')
+
+EXISTING_SERVICES=$(kubectl get ingress $INGRESS_NAME -n $NAMESPACE -o json | jq -r '.metadata.annotations."nginx.org/websocket-services" // ""')
+UPDATED_SERVICES=$(echo $EXISTING_SERVICES | sed "s/\b$SERVICE_TO_REMOVE\b//g" | sed "s/,,/,/g" | sed "s/^,//" | sed "s/,\$//")
+
+if [ "$HOST_INDEX" != "null" ]; then
+  cat > remove_host_patch.yaml <<- EOM
+- op: remove
+  path: /spec/rules/$HOST_INDEX
+EOM
+
+  if [ "$TLS_INDEX" != "null" ]; then
+    echo "- op: remove" >> remove_host_patch.yaml
+    echo "  path: /spec/tls/$TLS_INDEX" >> remove_host_patch.yaml
+  fi
+
+  kubectl patch ingress $INGRESS_NAME -n $NAMESPACE --type json --patch-file remove_host_patch.yaml
+  rm remove_host_patch.yaml
+else
+  echo "Host not found."
+fi
+
+if [ "$EXISTING_SERVICES" != "" ]; then
+  cat > update_annotation_patch.yaml <<- EOM
+- op: replace
+  path: /metadata/annotations/nginx.org~1websocket-services
+  value: $UPDATED_SERVICES
+EOM
+
+  kubectl patch ingress $INGRESS_NAME -n $NAMESPACE --type json --patch-file update_annotation_patch.yaml
+  rm update_annotation_patch.yaml
+fi
+
+

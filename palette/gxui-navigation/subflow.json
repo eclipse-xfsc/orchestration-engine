@@ -1,0 +1,530 @@
+[
+    {
+        "id": "18818b88805c9111",
+        "type": "subflow",
+        "name": "GXUI Navigation",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "4f36c87a29ba0ee7"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1447.5,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "05d0d0ad6985d2d3",
+                        "port": 0
+                    },
+                    {
+                        "id": "6118a30eee7fd2de",
+                        "port": 0
+                    },
+                    {
+                        "id": "56096b48d530e457",
+                        "port": 0
+                    },
+                    {
+                        "id": "f84e210432d44368",
+                        "port": 0
+                    },
+                    {
+                        "id": "05fc3aefd86f92a4",
+                        "port": 0
+                    },
+                    {
+                        "id": "9c968d62fc0f5dc5",
+                        "port": 0
+                    },
+                    {
+                        "id": "c6906a9dd83ba563",
+                        "port": 0
+                    },
+                    {
+                        "id": "32f11e1a524dbdfd",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "05d0d0ad6985d2d3",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "1st Step Next",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 725,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6118a30eee7fd2de",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "2nd Step Previous",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 715,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c968d62fc0f5dc5",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "2nd Step Next",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"2\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 715,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56096b48d530e457",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "3rd Step Previous",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"2\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 725,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f84e210432d44368",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "3rd Step Next",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"2\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"3\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 725,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05fc3aefd86f92a4",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "4th Step Prevoius",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"2\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"3\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 725,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f36c87a29ba0ee7",
+        "type": "switch",
+        "z": "18818b88805c9111",
+        "name": "",
+        "property": "payload.event.submit",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "goto2ndStep",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "goto1stStep",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "goto3rdStep",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "goto4thStep",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "goto5thStep",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 205,
+        "y": 780,
+        "wires": [
+            [
+                "05d0d0ad6985d2d3",
+                "56096b48d530e457"
+            ],
+            [
+                "6118a30eee7fd2de"
+            ],
+            [
+                "9c968d62fc0f5dc5",
+                "05fc3aefd86f92a4"
+            ],
+            [
+                "f84e210432d44368",
+                "32f11e1a524dbdfd"
+            ],
+            [
+                "c6906a9dd83ba563"
+            ]
+        ]
+    },
+    {
+        "id": "32f11e1a524dbdfd",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "5th Step Prevoius",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"2\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"3\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"4\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 725,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6906a9dd83ba563",
+        "type": "change",
+        "z": "18818b88805c9111",
+        "name": "4th Step Next",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"0\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"1\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"2\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"3\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui.dataset_s[\"4\"].setBadge.isActive",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 725,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6306f563db5e0b3f",
+        "type": "subflow:18818b88805c9111",
+        "z": "38f32291b23e4914",
+        "name": "",
+        "x": 445,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    }
+]

@@ -1,0 +1,5504 @@
+[
+    {
+        "id": "e1273a058be94297",
+        "type": "group",
+        "z": "27f880bb96996b01",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2491e9eb6412678c",
+            "3d8cee257f8c8832",
+            "4715c681ee0bcc2f",
+            "d0017ff67a5e26d9",
+            "2a406155d86bbe90",
+            "1d13ceb50ae9d7f2",
+            "0e922743e68adc3e",
+            "4681a9ebe6b53ffe",
+            "7bf8a4d02afbe6d9",
+            "763d849a17cf2254",
+            "367fe89c7f944a66",
+            "17e273e1d5654dce",
+            "6a34dbebc706951c",
+            "0b6b8d89c94102d6",
+            "55ab2d39b4589fbf",
+            "2076df2ed08b5ecc",
+            "e5308357d1786190",
+            "c3b886bbe47886e0",
+            "4651122b5867ee0f",
+            "4512e62072d4a370",
+            "4cfb9073c85b7453",
+            "cfd33de1fa7284dc",
+            "eefea0f52dc483d4",
+            "9cab1c0dbe53675d",
+            "4a923607b7e0b756",
+            "86bc4aa939758e6b",
+            "27bfb0ca96e3c9c4",
+            "3b1937063d31312f",
+            "63187f28e8d32397",
+            "3f5e0e77731da8c3",
+            "059d5be55c61036c"
+        ],
+        "x": 244,
+        "y": 224,
+        "w": 1492,
+        "h": 852
+    },
+    {
+        "id": "2491e9eb6412678c",
+        "type": "Label",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "TitleText": "Welcome to Gaia-X Labeling Portal-1",
+        "TitleClass": "",
+        "DescTitle": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "DescClass": "labelDescription",
+        "DescStyle": "",
+        "TitleStyle": "",
+        "x": 845,
+        "y": 300,
+        "wires": [
+            [
+                "059d5be55c61036c"
+            ]
+        ]
+    },
+    {
+        "id": "3d8cee257f8c8832",
+        "type": "inject",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Show UI",
+        "props": [
+            {
+                "p": "hos",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "2491e9eb6412678c"
+            ]
+        ]
+    },
+    {
+        "id": "4715c681ee0bcc2f",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link in 14",
+        "links": [
+            "d0017ff67a5e26d9"
+        ],
+        "x": 297.5,
+        "y": 440,
+        "wires": [
+            [
+                "6a34dbebc706951c"
+            ]
+        ]
+    },
+    {
+        "id": "d0017ff67a5e26d9",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "4715c681ee0bcc2f"
+        ],
+        "x": 1682.5,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2a406155d86bbe90",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link out 15",
+        "mode": "link",
+        "links": [
+            "4681a9ebe6b53ffe"
+        ],
+        "x": 1682.5,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1d13ceb50ae9d7f2",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link out 16",
+        "mode": "link",
+        "links": [
+            "7bf8a4d02afbe6d9"
+        ],
+        "x": 1682.5,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "0e922743e68adc3e",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link in 15",
+        "links": [
+            "63187f28e8d32397"
+        ],
+        "x": 297.5,
+        "y": 580,
+        "wires": [
+            [
+                "0b6b8d89c94102d6"
+            ]
+        ]
+    },
+    {
+        "id": "4681a9ebe6b53ffe",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link in 16",
+        "links": [
+            "2a406155d86bbe90"
+        ],
+        "x": 297.5,
+        "y": 720,
+        "wires": [
+            [
+                "55ab2d39b4589fbf"
+            ]
+        ]
+    },
+    {
+        "id": "7bf8a4d02afbe6d9",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link in 17",
+        "links": [
+            "1d13ceb50ae9d7f2"
+        ],
+        "x": 297.5,
+        "y": 860,
+        "wires": [
+            [
+                "2076df2ed08b5ecc"
+            ]
+        ]
+    },
+    {
+        "id": "763d849a17cf2254",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link in 18",
+        "links": [
+            "367fe89c7f944a66"
+        ],
+        "x": 302.5,
+        "y": 1000,
+        "wires": [
+            [
+                "e5308357d1786190"
+            ]
+        ]
+    },
+    {
+        "id": "367fe89c7f944a66",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link out 17",
+        "mode": "link",
+        "links": [
+            "763d849a17cf2254"
+        ],
+        "x": 1682.5,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "17e273e1d5654dce",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link out 18",
+        "mode": "link",
+        "links": [
+            "0c5f67bfef527a6a",
+            "371e03adb4851800",
+            "3c0871bce3b959e3",
+            "8615c4e3bd3bd6e8"
+        ],
+        "x": 1682.5,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "6a34dbebc706951c",
+        "type": "advance-group-badge",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GROUP > Contactual Framework",
+        "number": "1",
+        "title": "Contactual Framework",
+        "description": "This is First Group",
+        "x": 520,
+        "y": 440,
+        "wires": [
+            [
+                "4651122b5867ee0f"
+            ]
+        ]
+    },
+    {
+        "id": "0b6b8d89c94102d6",
+        "type": "advance-group-badge",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GROUP > Data Protection",
+        "number": "2",
+        "title": "Data Protection",
+        "description": "This is Second Group",
+        "x": 500,
+        "y": 580,
+        "wires": [
+            [
+                "cfd33de1fa7284dc"
+            ]
+        ]
+    },
+    {
+        "id": "55ab2d39b4589fbf",
+        "type": "advance-group-badge",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GROUP > Cybersecurity",
+        "number": "3",
+        "title": "Cybersecurity",
+        "description": "This is Third Group",
+        "x": 500,
+        "y": 720,
+        "wires": [
+            [
+                "c3b886bbe47886e0"
+            ]
+        ]
+    },
+    {
+        "id": "2076df2ed08b5ecc",
+        "type": "advance-group-badge",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GROUP > Portability",
+        "number": "4",
+        "title": "Portability",
+        "description": "This is Forth Group",
+        "x": 495,
+        "y": 860,
+        "wires": [
+            [
+                "4a923607b7e0b756"
+            ]
+        ]
+    },
+    {
+        "id": "e5308357d1786190",
+        "type": "advance-group-badge",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GROUP > European Control",
+        "number": "5",
+        "title": " European Control",
+        "description": "This is Fifth Group",
+        "x": 510,
+        "y": 1000,
+        "wires": [
+            [
+                "86bc4aa939758e6b"
+            ]
+        ]
+    },
+    {
+        "id": "c3b886bbe47886e0",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Cybersecurity",
+        "number": "3.1",
+        "title": "Cybersecurity",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "Second Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "3.1.1 Organization of information security: Plan, implement, maintain and continuously improve the information security framework within the organisation.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.2 Information Security Policies: Provide a global information security policy, derived into policies and procedures regarding security requirements and to support business requirements.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.3  Risk Management: Ensure that risks related to information security are properly identified, assessed, and treated, and that the residual risk is acceptable to the CSP.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.4 Human Resources: Ensure that employees understand their responsibilities, are aware of their responsibilities with regard to information security, and that the organisation’s assets are protected in the event of changes in responsibilities or termination.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.5 Asset Management: Identify the organisation’s own assets and ensure an appropriate level of protection throughout their lifecycle.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.6 Physical Security: Prevent unauthorised physical access and protect against theft, damage, loss and outage of operations.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.7 Operational Security: Ensure proper and regular operation, including appropriate measures for planning and monitoring capacity, protection against malware, logging and monitoring events, and dealing with vulnerabilities, malfunctions and failures.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.8 Identity, Authentication and access control management: Limit access to information and information processing facilities.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.9 Cryptography and Key management: Ensure appropriate and effective use of cryptography to protect the confidentiality, authenticity or integrity of information.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.10 Communication Security: Ensure the protection of information in networks and the corresponding information processing systems.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.11 Portability and Interoperability: The CSP shall provide a means by which a customer can obtain their stored customer data, and provide documentation on how (where appropriate, through documented API’s) the CSC can obtain the stored data at the end of the contractual relationship and shall document how the data will be securely deleted from the Cloud Service Provider in what timeframe.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.12 Change and Configuration Management: Ensure that changes and configuration actions to information systems guarantee the security of the delivered cloud service.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.13 Development of Information systems: Ensure information security in the development cycle of information systems.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.14 Procurement Management: Ensure the protection of information that suppliers of the CSP can access and monitor the agreed services and security requirements.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.15 Incident Management: Ensure a consistent and comprehensive approach to the capture, assessment, communication and escalation of security incidents.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.16 Business Continuity: Plan, implement, maintain and test procedures and measures for business continuity and emergency management.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.17 Compliance: Avoid non-compliance with legal, regulatory, self-imposed or contractual information security and compliance requirements.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.18 User documentation: Provide up-to-date information on the secure configuration and known vulnerabilities of the cloud service for cloud customers.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.19 Dealing with information requests from government agencies: Ensure appropriate handling of government investigation requests for legal review, information to cloud customers, and limitation of access to or disclosure of Customer Data.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "3.1.20 Product safety and security: Provide appropriate mechanisms for cloud customers to enable product safety and security.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1135,
+        "y": 720,
+        "wires": [
+            [
+                "1d13ceb50ae9d7f2"
+            ]
+        ]
+    },
+    {
+        "id": "4651122b5867ee0f",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Cotractual Governance",
+        "number": "1.1",
+        "title": "Cotractual Governance",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "Second Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "#",
+                "select": "Submit and Send Data",
+                "onClickSend": "#"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "1.1.1 The Provider shall offer the ability to establish a legally binding act.  This legally binding act shall be documented.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.1.2 The Provider shall have an option for each legally binding act to be governed by EU/EEA/Member State law.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.1.3  The Provider shall clearly identify for which parties the legal act is binding.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.1.4 The Provider shall ensure that the legally binding act covers the entire provision of the Service Offering.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "true",
+        "x": 845,
+        "y": 440,
+        "wires": [
+            [
+                "4512e62072d4a370"
+            ]
+        ]
+    },
+    {
+        "id": "4512e62072d4a370",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "General Material",
+        "number": "1.2",
+        "title": "General Material",
+        "description": "",
+        "formtitle": "The Provider shall offer the ability to establish a contract under Union or EU/EEA/Member State law and specifically addressing GDPR requirements.",
+        "formDes": "",
+        "tiptitle": "First Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "1.2.1 The Provider shall ensure there are specific provisions regarding service interruptions and business continuity (e.g., by means of a service level agreement), Provider’s bankruptcy or any other reason by which the Provider may cease to exist in law.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.2 The Provider shall ensure there are provisions governing the rights of the parties to use the service and any Customer Data therein.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.3 The Provider shall ensure there are provisions governing changes, regardless of their kind.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.4 The Provider shall ensure there are provisions governing aspects regarding copyright or any other intellectual property rights.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.5 The Provider shall declare the location of the processing of any Customer Data at urban area level.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.6 The Provider shall explain how information about subcontractors and related Customer Data localization will be communicated.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.7 The Provider shall communicate to the Customer where the applicable jurisdiction(s) of subcontractors will be.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.8 The Provider shall include in the contract the contact details where Customer may address any queries regarding the Service Offering and the contract.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.9 The Provider shall adopt the Gaia-X Trust Framework, by which Customers may verify Provider’s Service Offering.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.2.10 The Provider shall provide transparency on the environmental impact of the Service Offering provided",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1135,
+        "y": 440,
+        "wires": [
+            [
+                "4cfb9073c85b7453"
+            ]
+        ]
+    },
+    {
+        "id": "4cfb9073c85b7453",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Technical Compliance",
+        "number": "1.3",
+        "title": "Technical Compliance",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "Third Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "1.3.1 Service Offering shall include a policy using a common Domain-Specific Language (DSL) to describe Permissions, Requirements and Constraints.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.3.2 Service Offering requires being operated by Service Offering Provider with a verified identity.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.3.3 Service Offering must provide a conformant self-description.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.3.4 Self-Description attributes need to be consistent across linked Self-Descriptions.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "1.3.5 The Provider shall ensure that the Consumer uses a verified identity provided by the Federator.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1415,
+        "y": 440,
+        "wires": [
+            [
+                "63187f28e8d32397"
+            ]
+        ]
+    },
+    {
+        "id": "cfd33de1fa7284dc",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "General",
+        "number": "2.1",
+        "title": "General",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "Second Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "2.1.1 The Provider shall offer the ability to establish a contract under Union or EU/EEA/Member State law and specifically addressing GDPR requirements.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.1.2 The Provider shall define the roles and responsibilities of each party.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.1.3  The Provider shall clearly define the technical and organizational measures in accordance with the roles and responsibilities of the parties, including an adequate level of detail.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 845,
+        "y": 580,
+        "wires": [
+            [
+                "eefea0f52dc483d4"
+            ]
+        ]
+    },
+    {
+        "id": "eefea0f52dc483d4",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GDPR Art.28",
+        "number": "2.2",
+        "title": "GDPR Art.28",
+        "description": "",
+        "formtitle": "The Provider shall offer the ability to establish a contract under Union or EU/EEA/Member State law and specifically addressing GDPR requirements.",
+        "formDes": "",
+        "tiptitle": "First Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "2.2.1 The Provider shall be ultimately bound to instructions of the Customer.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.2.2 The Provider shall clearly define how Customer may instruct, including by electronic means such as configuration tools or APIs.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.2.3 The Provider shall clearly define if and to which extent third country transfer will take place.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.2.4 The Provider shall clearly define if and to the extent third country transfers will take place, and by which means of Chapter V GDPR these transfers will be protected.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.2.5 The Provider shall clearly define if and to which extent sub-processors will be involved.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.2.6 The Provider shall clearly define if and to the extent sub-processors will be involved, and the measures that are in place regarding sub-processors management.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.2.7 The Provider shall define the audit rights for the Customer.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1135,
+        "y": 580,
+        "wires": [
+            [
+                "9cab1c0dbe53675d"
+            ]
+        ]
+    },
+    {
+        "id": "9cab1c0dbe53675d",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "GDPR Art.26",
+        "number": "2.3",
+        "title": "GDPR Art.26",
+        "description": "",
+        "formtitle": "Please select one of the following roles that your company will take in the ecosystem",
+        "formDes": "",
+        "tiptitle": "First Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "2.3.1 In case of a joint controllership, the Provider shall ensure an arrangement pursuant to Art. 26 (1) GDPR is in place.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.3.2 In case of a joint controllership, at a minimum, the Provider shall ensure that the very essence of such agreement is communicated to data subjects.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "2.3.3 In case of a joint controllership, the Provider shall publish a point of contact for data subjects.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1415,
+        "y": 580,
+        "wires": [
+            [
+                "2a406155d86bbe90"
+            ]
+        ]
+    },
+    {
+        "id": "4a923607b7e0b756",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Switching and porting ",
+        "number": "4.1",
+        "title": "Switching and porting ",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "First Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "4.1.1 The Provider shall implement practices for facilitating the switching of Providers and the porting of Customer Data in a structured, commonly used and machine-readable format including open standard formats where required or requested by the Customer.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "4.1.2 The Provider shall ensure pre-contractual information exists, with sufficiently detailed, clear and transparent information regarding the processes of Customer Data portability, technical requirements, timeframes and charges that apply in case a professional user wants to switch to another Provider or port Customer Data back to its own IT systems.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1135,
+        "y": 860,
+        "wires": [
+            [
+                "367fe89c7f944a66"
+            ]
+        ]
+    },
+    {
+        "id": "86bc4aa939758e6b",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Processing",
+        "number": "5.1",
+        "title": "Processing",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "First Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "previous",
+                "select": "Submit and Send Data",
+                "onClickSend": "previous"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "5.1.1 For Label Level 2, the Provider shall provide the option that all Customer Data are processed and stored exclusively in EU/EEA.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "5.1.2 For Label Level 3, the Provider shall process and store all Customer Data exclusively in the EU/EEA.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "5.1.3  For Label Level 3, where the Provider or subcontractor is subject to legal obligations to transmit or disclose Customer Data on the basis of a non-EU/EEA statutory order, the Provider shall have verified safeguards in place to ensure that any access request is compliant with EU/EEA/Member State law.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "5.1.4 For Label Level 3, the Provider’s registered head office, headquarters and main establishment shall be established in a Member State of the EU/EEA.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "5.1.5 For Label Level 3, Shareholders in the Provider, whose registered head office, headquarters and main establishment are not established in a Member State of the EU/EEA shall not, directly or indirectly, individually or jointly, hold control of the CSP. Control is defined as the ability of a natural or legal person to exercise decisive influence directly or indirectly on the CSP through one or more intermediate entities, de jure or de facto. (cf. Council Regulation No 139/2004 and Commission Consolidated Jurisdictional Notice under Council Regulation (EC) No 139/2004 for illustrations of decisive control).",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "5.1.6 For Label Level 3, in the event of recourse by the Provider, in the context of the services provided to the Customer, to the services of a third-party company - including a subcontractor - whose registered head office, headquarters and main establishment is outside of the European Union or who is owned or controlled directly or indirectly by another third-party company registered outside the EU/EEA, the third-party company shall have no access over the Customer Data nor access and identity management for the services provided to the Customer. The Provider, including any of its sub-processor, shall push back any request received from non-European authorities to obtain communication of Customer Data relating to European Customers, except if request is made in execution of a court judgment or order that is valid and compliant under Union law and applicable Member States law as provided by Article 48 GDPR.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            },
+            {
+                "type": "label",
+                "title": "5.1.7 For Label Level 3, the Provider must maintain continuous operating autonomy for all or part of the services it provides. The concept of operating autonomy shall be understood as the ability to maintain the provision of the cloud computing service by drawing on the provider’s own skills or by using adequate alternatives",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 845,
+        "y": 1000,
+        "wires": [
+            [
+                "27bfb0ca96e3c9c4"
+            ]
+        ]
+    },
+    {
+        "id": "27bfb0ca96e3c9c4",
+        "type": "AdvanceData_set",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "Access",
+        "number": "5.2",
+        "title": "Access",
+        "description": "",
+        "formtitle": "Fill contractual governance info",
+        "formDes": "",
+        "tiptitle": "First Step Tip",
+        "tipdesc": "Create your account in a few steps and benefit of our secure and transparent Federated Catalogue.",
+        "menuButton": [
+            {
+                "id": "",
+                "label": "Previous",
+                "style": "",
+                "class": "",
+                "value": "#",
+                "select": "Submit and Send Data",
+                "onClickSend": "#"
+            },
+            {
+                "id": "",
+                "label": "Next",
+                "style": "",
+                "class": "",
+                "value": "next",
+                "select": "Submit and Send Data",
+                "onClickSend": "next"
+            }
+        ],
+        "formElement": [
+            {
+                "type": "label",
+                "title": "5.2.1 The Provider shall not access Customer Data unless authorized by the Customer or when the access is in accordance with EU/EEA/Member State law.",
+                "description": "",
+                "style": "",
+                "class": ""
+            },
+            {
+                "title": "",
+                "value": "Confirm ",
+                "type": "radio",
+                "optValue": "Confirm , Deny , Not applicable",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": "",
+                "type": "textarea",
+                "placeholder": "Reasoning",
+                "desc": "Reasoning",
+                "style": "",
+                "class": ""
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "Complete your evidance information",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Attestation PDF"
+            },
+            {
+                "value": {},
+                "style": "",
+                "class": "",
+                "type": "advanceUpload",
+                "label": "",
+                "description": "",
+                "accept": "*",
+                "multiple": "false",
+                "uploadkey": "",
+                "src": "upload.svg",
+                "uploadname": "Verifiable Credential"
+            },
+            {
+                "value": "",
+                "type": "advanceInput",
+                "inputType": "email",
+                "placeholder": "https://www.google.com",
+                "style": "",
+                "class": "",
+                "linkname": "Website ",
+                "src": "web-link.svg",
+                "desc": ""
+            },
+            {
+                "type": "formSeparator",
+                "style": "",
+                "class": ""
+            }
+        ],
+        "dropdownStatus": "false",
+        "x": 1145,
+        "y": 1000,
+        "wires": [
+            [
+                "17e273e1d5654dce"
+            ]
+        ]
+    },
+    {
+        "id": "3b1937063d31312f",
+        "type": "GXUI Footer",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "",
+        "alt": "Go to home",
+        "src": "logo_white.svg",
+        "style": "",
+        "class": "footerImage",
+        "MenuButton": [
+            {
+                "label": "Legal Notice",
+                "style": "",
+                "class": "",
+                "value": "https://international.eco.de/legal-notice/",
+                "type": "Direct Link",
+                "href": "https://international.eco.de/legal-notice/"
+            }
+        ],
+        "MenuItem": [
+            {
+                "label": "Imprint",
+                "style": "",
+                "class": "",
+                "value": "https://www.google.com",
+                "type": "Direct Link",
+                "href": "https://www.google.com"
+            },
+            {
+                "label": "Privacy",
+                "style": "",
+                "class": "",
+                "value": "submit",
+                "onClick": "submit",
+                "type": "Submit"
+            },
+            {
+                "label": "Policy",
+                "style": "",
+                "class": "",
+                "value": "policy",
+                "type": "Submit and Send Data",
+                "onClickSend": "policy"
+            },
+            {
+                "label": "Cookie Settings",
+                "style": "",
+                "class": "",
+                "value": "cookie",
+                "type": "Submit and Send Data",
+                "onClickSend": "cookie"
+            },
+            {
+                "label": "Terms & Conditions",
+                "style": "",
+                "class": "",
+                "value": "https://www.bing.com",
+                "type": "Direct Link",
+                "href": "https://www.bing.com"
+            },
+            {
+                "label": "Contact",
+                "style": "",
+                "class": "",
+                "value": "#",
+                "type": "Direct Link",
+                "href": "#"
+            },
+            {
+                "label": "Help",
+                "style": "",
+                "class": "",
+                "value": "#",
+                "type": "Direct Link",
+                "href": "#"
+            }
+        ],
+        "x": 1415,
+        "y": 300,
+        "wires": [
+            [
+                "d0017ff67a5e26d9"
+            ]
+        ]
+    },
+    {
+        "id": "63187f28e8d32397",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link out 19",
+        "mode": "link",
+        "links": [
+            "0e922743e68adc3e"
+        ],
+        "x": 1682.5,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3f5e0e77731da8c3",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "link in 19",
+        "links": [
+            "3141f46da6be29fe",
+            "7a30f1756b69426c",
+            "5d8ffce034ea4ad5",
+            "0e158c490aa73b9c"
+        ],
+        "x": 587.5,
+        "y": 340,
+        "wires": [
+            [
+                "2491e9eb6412678c"
+            ]
+        ]
+    },
+    {
+        "id": "059d5be55c61036c",
+        "type": "GXUI Header",
+        "z": "27f880bb96996b01",
+        "g": "e1273a058be94297",
+        "name": "",
+        "alt": "Gaia-x logo image",
+        "src": "logo.svg",
+        "style": "headerImage",
+        "class": "headerImageSrc",
+        "MenuButton": [
+            {
+                "label": "Log out",
+                "style": "",
+                "class": "",
+                "value": "onClickLogout",
+                "onClick": "onClickLogout",
+                "type": "Submit"
+            }
+        ],
+        "MenuItem": [
+            {
+                "label": "Services 3",
+                "style": "",
+                "class": "",
+                "value": "https://portal.gxfs.dev/onboarding",
+                "type": "Direct Link",
+                "href": "https://portal.gxfs.dev/onboarding"
+            },
+            {
+                "label": "Data",
+                "style": "",
+                "class": "",
+                "value": "data",
+                "onClickSend": "data",
+                "type": "Submit and Send Data"
+            },
+            {
+                "label": "Provider",
+                "style": "",
+                "class": "",
+                "value": "provider",
+                "onClickSend": "provider",
+                "type": "Submit and Send Data"
+            },
+            {
+                "label": "Help",
+                "style": "",
+                "class": "",
+                "value": "https://www.google.com",
+                "type": "Direct Link",
+                "href": "https://www.google.com"
+            },
+            {
+                "label": "Language",
+                "style": "",
+                "class": "",
+                "value": "https://www.google.com",
+                "type": "Direct Link",
+                "href": "https://www.google.com"
+            }
+        ],
+        "x": 1135,
+        "y": 300,
+        "wires": [
+            [
+                "3b1937063d31312f"
+            ]
+        ]
+    },
+    {
+        "id": "8dc7b848d8fba284",
+        "type": "group",
+        "z": "27f880bb96996b01",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "780e9003aff11a46",
+            "0c5f67bfef527a6a",
+            "44a49ec5ae8a3f12",
+            "4f949c9c096caae8",
+            "ef6fdacab47b8d14",
+            "7a30f1756b69426c",
+            "f323eb6c1ec10a02",
+            "458032818ce2a812",
+            "c227e53fe6613e3d"
+        ],
+        "x": 249,
+        "y": 1164,
+        "w": 1367,
+        "h": 272
+    },
+    {
+        "id": "780e9003aff11a46",
+        "type": "change",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "UI Ready",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.ui",
+                "pt": "msg",
+                "to": "ui",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "ui",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 515,
+        "y": 1240,
+        "wires": [
+            [
+                "4f949c9c096caae8"
+            ]
+        ]
+    },
+    {
+        "id": "0c5f67bfef527a6a",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "link in 13",
+        "links": [
+            "17e273e1d5654dce",
+            "db78819c930553ac",
+            "d84775f8b9b9fc8f",
+            "5ccdfa46a45cdaba"
+        ],
+        "x": 302.5,
+        "y": 1240,
+        "wires": [
+            [
+                "780e9003aff11a46"
+            ]
+        ]
+    },
+    {
+        "id": "44a49ec5ae8a3f12",
+        "type": "function",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "Handle Nav",
+        "func": "function activateBadge(data, badgeNumber) {\n    console.log(\"====Activate Badge====>\", data)\n    let groupNumber = badgeNumber.split('.')[0];\n\n    let badgeFound = false;\n\n\n    for (const group of Object.values(data)) {\n        const groupBadgeNumber = group.groupBadge.number.split('.')[0];\n\n        group.groupBadge.isActive = groupBadgeNumber === groupNumber;\n\n        badgeFound = badgeFound || group.groupBadge.isActive;\n\n        for (const set of Object.values(group.dataset_s)) {\n            set.setBadge.isActive = set.setBadge.number === badgeNumber;\n\n            badgeFound = badgeFound || set.setBadge.isActive;\n        }\n    }\n\n    if (!badgeFound) {\n        throw new Error(`Badge number ${badgeNumber} not found.`);\n    }\n    console.log(\"====Activate Badge====>\", data)\n    return data;\n}\n\n\nfunction handleEvent(msg, datagroup_s) {\n    console.log(\"====Handle Event Entry====>\", msg)\n    if (msg.payload.event.submit === \"next\") {\n        for (let i = 0; i < datagroup_s.length; i++) {\n            const dataset_s = datagroup_s[i].dataset_s;\n\n            for (let j = 0; j < dataset_s.length; j++) {\n                const setBadge = dataset_s[j].setBadge;\n\n                if (setBadge.isActive) {\n                    setBadge.isActive = false;\n\n                    if (dataset_s[j + 1]) {\n                        dataset_s[j + 1].setBadge.isActive = true;\n                    } else if (datagroup_s[i + 1]) {\n                        datagroup_s[i + 1].dataset_s[0].setBadge.isActive = true;\n                        datagroup_s[i + 1].groupBadge.isActive = true;\n                        datagroup_s[i].groupBadge.isActive = false;\n                    }\n\n                    return datagroup_s;\n                }\n            }\n        }\n    }\n    else if (msg.payload.event.submit === \"previous\") {\n        for (let i = datagroup_s.length - 1; i >= 0; i--) {\n            const dataset_s = datagroup_s[i].dataset_s;\n\n            for (let j = dataset_s.length - 1; j >= 0; j--) {\n                const setBadge = dataset_s[j].setBadge;\n\n                if (setBadge.isActive) {\n                    setBadge.isActive = false;\n\n                    if (dataset_s[j - 1]) {\n                        dataset_s[j - 1].setBadge.isActive = true;\n                    } else if (datagroup_s[i - 1]) {\n                        const prevDataset_s = datagroup_s[i - 1].dataset_s;\n                        prevDataset_s[prevDataset_s.length - 1].setBadge.isActive = true;\n                        datagroup_s[i - 1].groupBadge.isActive = true;\n                        datagroup_s[i].groupBadge.isActive = false;\n                    }\n\n                    return datagroup_s;\n                }\n            }\n        }\n    }\n    console.log(\"====Handle Event====>\", datagroup_s)\n    return datagroup_s;\n}\n\n\nif (msg.payload.badge) {\n    msg.payload.ui.datagroup_s = activateBadge(msg.payload.ui.datagroup_s, msg.payload.badge.number);\n}\n\nif (msg.payload.event) {\n    msg.payload.ui.datagroup_s = handleEvent(msg, msg.payload.ui.datagroup_s);\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 515,
+        "y": 1360,
+        "wires": [
+            [
+                "4f949c9c096caae8"
+            ]
+        ]
+    },
+    {
+        "id": "4f949c9c096caae8",
+        "type": "uibuilder",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "",
+        "topic": "",
+        "url": "wizard",
+        "fwdInMessages": false,
+        "allowScripts": false,
+        "allowStyles": false,
+        "copyIndex": true,
+        "templateFolder": "blank",
+        "extTemplate": "",
+        "showfolder": false,
+        "reload": false,
+        "sourceFolder": "src",
+        "deployedVersion": "6.1.1",
+        "showMsgUib": false,
+        "x": 865,
+        "y": 1240,
+        "wires": [
+            [
+                "458032818ce2a812"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ef6fdacab47b8d14",
+        "type": "function",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "Session init",
+        "func": "if (msg.uibuilderCtrl==\"client connect\"){\n    let cln= RED.util.cloneMessage(msg);\n    msg={}\n    msg._socketId = cln._socketId\n    msg.clientId = cln.clientId\n    console.log(\"=====msg======>\", msg)\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1355,
+        "y": 1240,
+        "wires": [
+            [
+                "7a30f1756b69426c"
+            ]
+        ]
+    },
+    {
+        "id": "7a30f1756b69426c",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "link out 20",
+        "mode": "link",
+        "links": [
+            "3f5e0e77731da8c3",
+            "3e39444e0e39710e",
+            "19cfc3c6c44909d5",
+            "b2c669b7af97aef3"
+        ],
+        "x": 1562.5,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "f323eb6c1ec10a02",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "link in 25",
+        "links": [
+            "77b56021807915cd",
+            "d3e76256255f8232"
+        ],
+        "x": 302.5,
+        "y": 1360,
+        "wires": [
+            [
+                "44a49ec5ae8a3f12"
+            ]
+        ]
+    },
+    {
+        "id": "458032818ce2a812",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "link out 30",
+        "mode": "link",
+        "links": [
+            "0d731448a9964eb3"
+        ],
+        "x": 1072.5,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "c227e53fe6613e3d",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "8dc7b848d8fba284",
+        "name": "link in 27",
+        "links": [
+            "6542e4f072664491",
+            "a6eb1c0ad7bf094f"
+        ],
+        "x": 692.5,
+        "y": 1240,
+        "wires": [
+            [
+                "4f949c9c096caae8"
+            ]
+        ]
+    },
+    {
+        "id": "815a718570ee5468",
+        "type": "group",
+        "z": "27f880bb96996b01",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "bf74aba57fb517ab",
+            "0d731448a9964eb3",
+            "2370df1cbd0a4ff6",
+            "4b4f341b676d4e40",
+            "6c432285dfc24e60",
+            "10f7c8167ac3f4a9",
+            "aff581a613feda1f",
+            "50fb8808815d1d04",
+            "a6eb1c0ad7bf094f",
+            "d3e76256255f8232",
+            "57dd72d384d42fce"
+        ],
+        "x": 204,
+        "y": 1564,
+        "w": 1857,
+        "h": 489.5
+    },
+    {
+        "id": "bf74aba57fb517ab",
+        "type": "switch",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "",
+        "property": "payload.init",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "userToken",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 455,
+        "y": 1760,
+        "wires": [
+            [
+                "10f7c8167ac3f4a9"
+            ],
+            [
+                "57dd72d384d42fce"
+            ]
+        ]
+    },
+    {
+        "id": "0d731448a9964eb3",
+        "type": "link in",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "link in 26",
+        "links": [
+            "458032818ce2a812"
+        ],
+        "x": 257.5,
+        "y": 1760,
+        "wires": [
+            [
+                "bf74aba57fb517ab"
+            ]
+        ]
+    },
+    {
+        "id": "2370df1cbd0a4ff6",
+        "type": "mongodb4",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "clientNode": "e54735180560f6bc",
+        "mode": "collection",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 1405,
+        "y": 1640,
+        "wires": [
+            [
+                "6c432285dfc24e60"
+            ]
+        ]
+    },
+    {
+        "id": "4b4f341b676d4e40",
+        "type": "function",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "function 83",
+        "func": "if (msg.payload.init.userToken !== undefined){\n    msg.collection = \"auth\"\n    msg.operation = \"findOne\"\n    const query = { token: msg.payload.init.userToken }\n    msg.payload = [query];\n}\n\n    return msg;   \n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1115,
+        "y": 1640,
+        "wires": [
+            [
+                "2370df1cbd0a4ff6"
+            ]
+        ]
+    },
+    {
+        "id": "6c432285dfc24e60",
+        "type": "function",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "function 84",
+        "func": "\nvar clientid = msg.clientId\nvar socketid = msg._socketId\nvar ui = msg.payload.ui.wizard\nif (msg.payload.ui && typeof msg.payload.ui.wizard !== \"undefined\") {\n    msg = {}\n    msg.clientId = clientid\n    msg._socketId = socketid\n    msg.payload = {}\n    msg.payload.ui = ui ;\n} else {\n    \n    msg = {}\n    msg.clientId = clientid\n    msg._socketId = socketid\n    msg.payload = {}\n    msg.payload= \"No UI Found\";\n}\n    return msg\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1765,
+        "y": 1640,
+        "wires": [
+            [
+                "a6eb1c0ad7bf094f"
+            ]
+        ]
+    },
+    {
+        "id": "10f7c8167ac3f4a9",
+        "type": "change",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "clientId",
+                "pt": "msg",
+                "to": "payload.init.clientId",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 795,
+        "y": 1640,
+        "wires": [
+            [
+                "4b4f341b676d4e40"
+            ]
+        ]
+    },
+    {
+        "id": "aff581a613feda1f",
+        "type": "mongodb4",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "clientNode": "e54735180560f6bc",
+        "mode": "collection",
+        "collection": "",
+        "operation": "",
+        "output": "toArray",
+        "maxTimeMS": "0",
+        "handleDocId": false,
+        "name": "",
+        "x": 1455,
+        "y": 1880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50fb8808815d1d04",
+        "type": "function",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "function 85",
+        "func": "\nmsg.collection = \"auth\"; // the name of your collection\nmsg.operation = \"updateOne\";\nconst filter = {token : msg.payload.userToken }\n\n    const updateDoc = {\n        \"$set\": {\n            \"ui.wizard\" : msg.payload.ui\n            \n        }\n    }\n    msg.payload = [filter, updateDoc]\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1115,
+        "y": 1880,
+        "wires": [
+            [
+                "aff581a613feda1f"
+            ]
+        ]
+    },
+    {
+        "id": "a6eb1c0ad7bf094f",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "link out 55",
+        "mode": "link",
+        "links": [
+            "c227e53fe6613e3d"
+        ],
+        "x": 2007.5,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "d3e76256255f8232",
+        "type": "link out",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "link out 56",
+        "mode": "link",
+        "links": [
+            "f323eb6c1ec10a02"
+        ],
+        "x": 1042.5,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "57dd72d384d42fce",
+        "type": "function",
+        "z": "27f880bb96996b01",
+        "g": "815a718570ee5468",
+        "name": "upload",
+        "func": "\n// function findUploadElements(jsonData) {\n//     const uploadElements = {};\n//     for (const step of Object.values(jsonData)) {\n//         for (const element of Object.values(step.form.element_s)) {\n//             if (element.type === \"upload\" && element.value) {\n//                 uploadElements[element.uploadkey] = element.value;\n//             }\n//         }\n//     }\n//     for (const step of Object.values(jsonData)) {\n//         for (const element of Object.values(step.form.element_s)) {\n//             if (element.type === \"download\" && element.options.downloadKey in uploadElements) {\n//                 element.value = uploadElements[element.options.downloadKey];\n//             }\n//         }\n//     }\n//     return uploadElements;\n// }\n\n\n// let data = msg.payload.ui.dataset_s\n// msg.payload.files = findUploadElements(data)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 795,
+        "y": 1880,
+        "wires": [
+            [
+                "50fb8808815d1d04",
+                "d3e76256255f8232"
+            ]
+        ]
+    },
+    {
+        "id": "e54735180560f6bc",
+        "type": "mongodb4-client",
+        "name": "",
+        "protocol": "mongodb+srv",
+        "hostname": "db-mongodb-leanea-f9f0367b.mongo.ondigitalocean.com",
+        "port": "",
+        "dbName": "gxfsDB",
+        "appName": "",
+        "authSource": "",
+        "authMechanism": "DEFAULT",
+        "tls": true,
+        "tlsCAFile": "",
+        "tlsCertificateKeyFile": "",
+        "tlsInsecure": false,
+        "connectTimeoutMS": "30000",
+        "socketTimeoutMS": "0",
+        "minPoolSize": "0",
+        "maxPoolSize": "100",
+        "maxIdleTimeMS": "0",
+        "uri": "",
+        "advanced": "{}",
+        "uriTabActive": "tab-uri-simple"
+    }
+]

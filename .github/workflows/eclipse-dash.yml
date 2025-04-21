@@ -1,0 +1,12 @@
+name: Call Eclipse Dash License Scanner (Go)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'
+  release:
+    types: [published]
+
+jobs:
+  call-remote-dash-workflow:
+    uses: eclipse-xfsc/dev-ops/.github/workflows/eclipse-dash-licence-node.yml@main

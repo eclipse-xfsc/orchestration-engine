@@ -1,0 +1,20 @@
+{
+    "name": "GXUI",
+    "version": "0.4.6",
+    "description": "",
+    "main": "GXUI_Header.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "atoosa",
+    "license": "ISC",
+    "node-red": {
+        "nodes": {
+            "GXUI_Header": "GXUI_Header.js",
+            "GXUI_Footer": "GXUI_Footer.js",
+            "Data_Set": "DataSet.js",
+            "Label": "Label.js"
+        }
+    },
+    "bundledDependencies": []
+}

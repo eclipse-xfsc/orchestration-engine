@@ -1,0 +1,199 @@
+#!/bin/bash
+echo 123
+SOURCE_PVC=$1
+NEW_HOSTNAME=$2
+BASE_HOSTNAME=$2
+export KUBECONFIG=$3
+/data/depgenerator/newdepgeneratorremover $2 $3
+NEW_HOSTNAME="$(echo "${NEW_HOSTNAME}" | tr '[:upper:]' '[:lower:]' | tr '.' '-')"
+PVC_TEMPLATE="apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{NEW_HOSTNAME}}
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: do-block-storage
+"
+
+RSYNC_POD_TEMPLATE="apiVersion: v1
+kind: Pod
+metadata:
+  name: rsync-data-pod
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: rsync-data
+    image: alpine:latest
+    command: [\"sh\", \"-c\", \"apk add --no-cache rsync && rsync -av /source/ /destination/\"]
+    volumeMounts:
+    - name: source-pvc
+      mountPath: /source
+    - name: destination-pvc
+      mountPath: /destination
+  volumes:
+  - name: source-pvc
+    persistentVolumeClaim:
+      claimName: {{SOURCE_PVC}}
+  - name: destination-pvc
+    persistentVolumeClaim:
+      claimName: {{NEW_HOSTNAME}}
+"
+
+DEPLOYMENT_TEMPLATE="apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{NEW_HOSTNAME}}
+  labels:
+    app: {{NEW_HOSTNAME}}
+    app.kubernetes.io/instance: {{NEW_HOSTNAME}}
+    app.kubernetes.io/name: {{NEW_HOSTNAME}}
+    app.kubernetes.io/version: 3.0.2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{NEW_HOSTNAME}}
+      app.kubernetes.io/instance: {{NEW_HOSTNAME}}
+      app.kubernetes.io/name: {{NEW_HOSTNAME}}
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{NEW_HOSTNAME}}
+        app.kubernetes.io/instance: {{NEW_HOSTNAME}}
+        app.kubernetes.io/name: {{NEW_HOSTNAME}}
+    spec:
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+      containers:
+      - image: docker.io/leanea/cr:1.0.1
+        imagePullPolicy: IfNotPresent
+        name: hackathon3-leanea-com
+        ports:
+        - containerPort: 1880
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /usr/src/node-red/node_modules/@node-red/editor-client/public/red
+          name: data
+          subPath: red
+        - mountPath: /usr/src/node-red/node_modules/@node-red/nodes/icons
+          name: data
+          subPath: icons
+        - mountPath: /data
+          name: data
+          subPath: nodedata
+        - mountPath: /all
+          name: data
+      - args:
+        - --baseurl
+        - /fscloud
+        image: filebrowser/filebrowser
+        imagePullPolicy: Always
+        name: filebrowser
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /srv
+          name: data
+          subPath: nodedata
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - command:
+        - sh
+        - -c
+        - chown -R 1000:1000 /srv
+        image: busybox
+        imagePullPolicy: Always
+        name: volume-permissions
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /srv
+          name: data
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1000
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: {{NEW_HOSTNAME}}
+"
+
+create_resource() {
+    local template="$1"
+    local source_pvc="$2"
+    local new_hostname="$3"
+
+    echo "${template}" \
+        | sed "s/{{SOURCE_PVC}}/${source_pvc}/g" \
+        | sed "s/{{NEW_HOSTNAME}}/${new_hostname}/g"
+}
+
+create_resource "${PVC_TEMPLATE}" "${SOURCE_PVC}" "${NEW_HOSTNAME}" > "${NEW_HOSTNAME}-pvc.yaml"
+create_resource "${RSYNC_POD_TEMPLATE}" "${SOURCE_PVC}" "${NEW_HOSTNAME}" > "${NEW_HOSTNAME}-rsync-pod.yaml"
+create_resource "${DEPLOYMENT_TEMPLATE}" "${SOURCE_PVC}" "${NEW_HOSTNAME}" > "${NEW_HOSTNAME}-deployment.yaml"
+
+echo "Generated files:"
+echo "${NEW_HOSTNAME}-pvc.yaml"
+echo "${NEW_HOSTNAME}-rsync-pod.yaml"
+echo "${NEW_HOSTNAME}-deployment.yaml"
+
+# echo "Applying resources to the cluster..."
+# kubectl apply -f "${NEW_HOSTNAME}-pvc.yaml"
+# kubectl apply -f "${NEW_HOSTNAME}-rsync-pod.yaml"
+
+# echo "Waiting for the rsync-data-pod to complete..."
+# kubectl wait --for=condition=complete --timeout=30m pod/rsync-data-pod
+
+# echo "Applying deployment to the cluster..."
+# kubectl apply -f "${NEW_HOSTNAME}-deployment.yaml"
+
+# echo "Resources applied successfully."
+
+#DEPLOYMENT_NAME=$(kubectl get pods --all-namespaces -o jsonpath='{.items[?(@.spec.volumes[0].persistentVolumeClaim.claimName=="'"${SOURCE_PVC}"'")].metadata.labels.app}')
+
+#if [ -z "${DEPLOYMENT_NAME}" ]; then
+ #   echo "No deployment found for source PVC ${SOURCE_PVC}. Exiting."
+  #  exit 1
+#fi
+DEPLOYMENT_NAME=$SOURCE_PVC
+echo "Scaling down deployment ${DEPLOYMENT_NAME}..."
+kubectl scale deployment "${DEPLOYMENT_NAME}" --replicas=0
+
+echo "Applying resources to the cluster...PERCENTAGE20"
+kubectl apply -f "${NEW_HOSTNAME}-pvc.yaml"
+kubectl apply -f "${NEW_HOSTNAME}-rsync-pod.yaml"
+
+echo "Waiting for the rsync-data-pod to complete...PERCENTAGE30"
+while [[ $(kubectl get pod rsync-data-pod -o 'jsonpath={.status.phase}') != "Succeeded" ]]; do
+  sleep 5
+done
+
+echo "Scaling up deployment ${DEPLOYMENT_NAME}...PERCENTAGE50"
+kubectl scale deployment "${DEPLOYMENT_NAME}" --replicas=1
+
+echo "Applying deployment to the cluster...PERCENTAGE60"
+kubectl apply -f "${NEW_HOSTNAME}-deployment.yaml"
+
+echo "Resources applied successfully.PERCENTAGE80"
+echo "Removing rsync-data-pod...PERCENTAGE90"
+kubectl delete pod rsync-data-pod
+/data/depgenerator/newkubescript $BASE_HOSTNAME $3
+

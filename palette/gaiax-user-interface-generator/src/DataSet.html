@@ -1,0 +1,1000 @@
+
+<script type="text/html" data-template-name="Data_Set">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name </span></label>
+        <input type="text" id="node-input-name" style="width: calc(100% - 105px)"  placeholder="Name">
+    </div>
+   
+    <div id="func-tab-body"style="width:900px" >
+    <div style="font-size: 17px;font-weight: 600;margin-bottom: 15px; color: #000000c9;"> Set Badge </div>
+    <div id="setBadge" style="padding: 20px 10px 4px 20px;border: 1px solid #00000030;border-radius: 10px;margin-bottom: 20px;">
+       
+        <div class="form-row" style="display: inline-block;width: 28%;">
+            <label style="width: auto; margin-right: 1px; " for="node-input-number"><i class="fa fa-dot-circle-o"></i> Number</label>
+            <input type="text" id="node-input-number" placeholder="Number">
+          
+        </div>
+        <div class="form-row" style="display: inline-block;width: 20%;">
+            <label style="width: auto; margin-right: 1px; " for="node-input-title"><i class="fa fa-dot-circle-o"></i> Title</label>
+            <input type="text" id="node-input-title" placeholder="Title">
+          
+        </div>
+        <div class="form-row" style="display: inline; width: 36%;">
+            <label style="width: auto; margin-right: 1px; " for="node-input-description"><i class="fa fa-dot-circle-o"></i> Description</label>
+            <input type="text" style="width: 15%;"id="node-input-description" placeholder="Description">
+          
+        </div>
+        <label for="dropdownStatus" style="display: inline-block;margin-left: 10px;">Status:</label>
+        <select id="dropdownStatus" name="dropdownStatus" style="display: inline;width: 17%; ">
+            <option value= "true">Enable</option>
+            <option value= "false">Disable</option>
+          
+          </select>
+    </div> 
+    <div style="font-size: 17px;font-weight: 600;margin-bottom: 15px; color: #000000c9;"> Set Form </div>
+
+    <div style="padding: 20px 10px 20px 10px;border: 1px solid #00000030;border-radius: 10px;">
+    <div class="form-row">
+        <label style="width: auto; margin-right: 1px; " for="node-input-formtitle"><i class="fa fa-dot-circle-o"></i> Form Title</label>
+        <input type="text" id="node-input-formtitle" placeholder="Title">
+      
+    </div>
+    <div class="form-row" >
+        <label style="width: auto; margin-right: 1px; " for="node-input-formDes"><i class="fa fa-dot-circle-o"></i> Form Description</label>
+        <input type="text" id="node-input-formDes" placeholder="Description">
+      
+    </div>
+        <div class="form-row node-input-formLabel-container-row" style="margin-bottom:0px; width:100%; min-width:520px">
+           
+            <label style="vertical-align:top;"><i class="fa fa-list-alt"></i> <span>Form Elements</label>
+            <div style="display:inline-block; width:88%; border:1px solid #ccc; border-radius:5px; box-sizing:border-box;">
+              <div class="red-ui-tray-header" style="width:100%; display: inline-block; padding-top:10px; padding-bottom:10px; border-top:0px solid; border-radius:5px 5px 0 0; border-bottom:1px solid #ccc;">
+                  <div style="width:94%; display:inline-block; margin-left:27px">
+                    <div style="width:20%; text-align:center; float:left;" ></span></div>
+                    <div style="width:20%; text-align:center; float:left; margin-left:9px"></div>
+                    <div style="margin-left:7px; width:16%; text-align:center; float:left; margin-left:9px"></div>
+                    <div style="width:12%; text-align:center; float:left;" ></div>
+                  </div>
+              </div>
+              <div id="node-input-formLabel-container-div" style=" height: 257px; padding: 5px; overflow-y:scroll;">
+                <ol class="node-input-formLabel-container node-input-formInput-container node-input-formDate-container node-input-formSwitchBtn-container node-input-formBtn-container node-input-formDropDown-container node-input-formRadio-container node-input-formCheckBox-container node-input-formUpload-container node-input-formDownload-container sortableList" style=" list-style-type:none; margin: 0;"></ol>
+              </div>
+        
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-FormInput" style="margin-top: 4px; margin-left: 103px;"><i class="fa fa-plus"></i> <span>input</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-Label" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>label</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-Date" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>date</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-SwitchBtn" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>switchBtn</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-Btn" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>button</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-DropDown" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>dropdown</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-Radio" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>radioBtn</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-CheckBox" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>checkBox</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-Upload" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>UploadBtn</span></a>
+            </div>
+            <div class="form-row" style="display: inline-block;">
+                <a href="#" class="editor-button editor-button-small" id="node-input-add-Download" style="margin-top: 4px; margin-left: 0px;"><i class="fa fa-plus"></i> <span>DownloadBtn</span></a>
+            </div>
+          
+          
+
+       </div>
+    </div>
+    <div style="font-size: 17px;font-weight: 600;margin-bottom: 15px;margin-top: 20px; color: #000000c9;"> Set Buttons </div>
+
+       <div class="form-row node-input-menubutton-container-row" style="margin-top:20px;margin-bottom:0px;width:98%;min-width:520px;border: 1px solid #00000030;padding: 20px 5px 10px 10px;border-radius: 10px;">
+        <label style="vertical-align:top;"><i class="fa fa-list-alt"></i> <span>Menu Buttons</label>
+        <div style="display:inline-block; width:86%; border:1px solid #ccc; border-radius:5px; box-sizing:border-box;">
+          <div class="red-ui-tray-header" style="width:100%; display: inline-block; padding-top:10px; padding-bottom:10px; border-top:0px solid; border-radius:5px 5px 0 0; border-bottom:1px solid #ccc;">
+            <div style="width:94%; display:inline-block; margin-left:27px">
+              <div style="width:20%; text-align:center; float:left;"></span></div>
+              <div style="width:20%; text-align:center; float:left; margin-left:9px"></div>
+              <div style="margin-left:7px; width:16%; text-align:center; float:left; margin-left:9px"></div>
+              <div style="width:12%; text-align:center; float:left;" ></div>
+            </div>
+          </div>
+          <div id="node-input-menubutton-container-div" style=" height: 257px; padding: 5px; overflow-y:scroll;">
+            <ol id="node-input-menubutton-container" style=" list-style-type:none; margin: 0;"></ol>
+          </div>
+        </div>
+        <div class="form-row">
+          <a href="#" class="editor-button editor-button-small" id="node-input-add-menubutton" style="margin-top: 4px; margin-left: 103px;"><i class="fa fa-plus"></i> <span data-i18n="ui_form.label.element">add element</span></a>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div style="font-size: 17px;font-weight: 600;margin-top: 20px; color: #000000c9;"> Set Tip </div>
+    <div style="margin-top: 30px;border: 1px solid #00000030;border-radius: 10px;padding: 30px 20px 0px 20px;width: 97%;">
+        
+        <div class="form-row" style="display: inline-block;width: 45%;">
+            <label style="width: auto; margin-right: 1px; " for="node-input-tiptitle"><i class="fa fa-dot-circle-o"></i> Tip Box Title</label>
+            <input type="text" id="node-input-tiptitle" placeholder="Title">
+        </div> 
+        <div class="form-row" style="display: inline-block;width: 58%;" >
+            <label style="width: auto; margin-right: 1px; padding-bottom: 20px;" for="node-input-tipdesc"><i class="fa fa-dot-circle-o"></i> Tip Box Description</label>
+            <input type="text" id="node-input-tipdesc" placeholder="Description">
+        </div>
+
+    </div>
+    
+
+
+
+
+</script>
+
+
+<script type="text/javascript">
+RED.nodes.registerType('Data_Set',{
+    category: 'UI Design',
+    color: '#fcaaff',
+    defaults: {
+        name:{value:""},
+        number:{value:""},
+        title:{value:""},
+        description:{value:""},
+        formtitle:{value:""},
+        formDes:{value:""},
+        tiptitle: {value:""},
+        tipdesc: {value:""},
+        menuButton: {value:{}},
+        formElement: {value:{}},   
+        dropdownStatus:{value:"true"}  
+    },
+
+    label: function() {
+            function prop2name(type, key) {
+                var result = RED.utils.parseContextKey(key);
+                return type +"." +result.key;
+            }
+            if (this.name) {
+                return this.name;
+            }
+         
+        },
+    inputs:1,
+    outputs:1,
+    icon: "bridge-dash.svg",
+    
+    oneditprepare: function() {
+        var dropdownStatus = this.dropdownStatus;
+      $("#dropdownStatus").val(dropdownStatus);
+
+        function generateElement(i, element,type) {
+            if(type=="switchBtn"){
+
+          
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Switch Button"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            
+            var labelField = $('<input/>',{class:"node-input-formSwitchBtn-label", type:"text", style:"margin-left:7px; width:17%;", placeholder: "Label", value:element.label}).appendTo(row);
+            var stylesField = $('<input/>',{class:"node-input-formSwitchBtn-style", type:"text", style:"margin-left:7px; width:17%;", placeholder: "Style", value:element.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formSwitchBtn-class", type:"text", style:"margin-left:7px; width:26%;", placeholder: "Class", value:element.class}).appendTo(row);
+
+
+            var valueClass ="node-input-formSwitchBtn-value"
+            if (!element.value) { valueClass ="node-input-formSwitchBtn-value input-error"; }
+
+
+            var typeField = $('<select/>',{class:"node-input-formSwitchBtn-select",type:"text",style:"margin-left:7px; width:25%"}).appendTo(row);
+
+            var arr = [
+              {val : "false", text: "Default False"},
+              {val : "true", text: "Default True"},
+              ];
+
+            $(arr).each(function() {
+                var isSelected= false;
+                if (element.value == this.val) {
+                    isSelected = true;
+                }
+                typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+            });
+
+ 
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formSwitchBtn-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formSwitchBtn-container").append(container);}
+
+            if(type=="button"){
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Button"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+           
+            var labelField = $('<input/>',{class:"node-input-formBtn-label", type:"text", style:"margin-left:7px; width:13%;", placeholder: "Label", value:element.label}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formBtn-class", type:"text", style:"margin-left:7px; width:13%;", placeholder: "Class", value:element.class}).appendTo(row);
+            var styleField = $('<input/>',{class:"node-input-formBtn-style", type:"text", style:"margin-left:7px; width:13%;", placeholder: "Style", value:element.style}).appendTo(row);
+
+            var valueClass ="node-input-formBtn-value"
+            if (!element.value) { valueClass ="node-input-formBtn-value input-error"; }
+
+
+            var typeField = $('<select/>',{class:"node-input-formBtn-select",type:"text",style:"margin-left:7px; width:33%"}).appendTo(row);
+
+            var arr = [
+                  {val : "Direct Link", text: "Direct Link"},
+                  {val : "Submit", text: "Submit"},
+                  {val : "Submit and Send Data", text: "Submit and Send Data"},
+                  ];
+
+            $(arr).each(function() {
+                var isSelected= false;
+                if (element.select == this.val) {
+                    isSelected = true;
+                }
+                typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+            });
+
+            var valueField = $('<input/>',{class:valueClass, type:"text", style:"margin-left:7px; width:12%;", placeholder: "Value", value:element.value}).appendTo(row);
+            valueField.keyup(function() {
+                if ($(this).val() && $(this).hasClass('input-error')) {
+                    $(this).removeClass('input-error')
+                }
+                else {
+                    if (!$(this).val()) {
+                        $(this).addClass('input-error')
+                    }
+                }
+
+            });
+
+
+        
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+            deleteButton.click(function() {
+                container.find(".node-input-formBtn-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formBtn-container").append(container);
+
+            }
+            if(type=="dropDown"){
+             var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"DropDown"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            var titleField = $('<input/>',{class:"node-input-formDropDown-title", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Title", value:element.title}).appendTo(row);
+            var valueField = $('<input/>',{class:"node-input-formDropDown-value", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Default Selection", value:element.value}).appendTo(row);
+            var optField = $('<input/>',{class:"node-input-formDropDown-opt", type:"text", style:"margin-left:7px; width:22%;", placeholder: "Options", value:element.opt}).appendTo(row);
+            var stylesField = $('<input/>',{class:"node-input-formDropDown-style", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Style", value:element.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formDropDown-class", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Class", value:element.class}).appendTo(row);
+
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formDropDown-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formDropDown-container").append(container);
+            }
+            if(type=="input"){
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Input"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            var valueField = $('<input/>',{class:"node-input-inputform-value", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Default Input", value:element.value}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-inputform-class", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Class", value:element.class}).appendTo(row);
+            var styleField = $('<input/>',{class:"node-input-inputform-css", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Styles", value:element.style}).appendTo(row);
+            var placeholderField = $('<input/>',{class:"node-input-inputform-placeholder", type:"text", style:"margin-left:7px; width:16%;", placeholder: "PlaceHolder", value:element.placeholder}).appendTo(row);
+
+        
+            var typeField = $('<select/>',{class:"node-input-inputform-type",type:"text",style:"margin-left:7px; width:20%"}).appendTo(row);
+
+            var arr2 = [
+              {val : "email", text: "email"},
+              {val : "password", text: "password"},
+              {val : "text", text: "text"},
+              ];
+
+           
+            $(arr2).each(function() {
+                var isSelected= false;
+                if (element.inputType == this.val) {
+                    isSelected = true;
+                }
+                typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+            });
+
+
+
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+            deleteButton.click(function() {
+                container.find(".node-input-inputform-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formInput-container").append(container);
+            
+
+            }
+            if(type=="label"){
+                    var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Label"}).appendTo(container);               
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            
+            var titleField = $('<input/>',{class:"node-input-formLabel-title", type:"text", style:"margin-left:7px; width:20%;", placeholder: "Title", value:element.title}).appendTo(row);
+            var descriptionField = $('<input/>',{class:"node-input-formLabel-description", type:"text", style:"margin-left:7px; width:20%;", placeholder: "Description", value:element.description}).appendTo(row);
+            var stylesField = $('<input/>',{class:"node-input-formLabel-style", type:"text", style:"margin-left:7px; width:20%;", placeholder: "Style", value:element.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formLabel-class", type:"text", style:"margin-left:7px; width:25%;", placeholder: "Class", value:element.class}).appendTo(row);
+
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formLabel-title").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formLabel-container").append(container);
+            }
+            if(type=="date"){
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-weight: 700;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Date"}).appendTo(container);               
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            
+            var valueField = $('<input/>',{class:"node-input-formDate-value", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Default Date", value:element.value}).appendTo(row);
+            var optValueField = $('<input/>',{class:"node-input-formDate-optValue", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Option Value", value:element.optValue}).appendTo(row);
+            var stylesField = $('<input/>',{class:"node-input-formDate-style", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Style", value:element.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formDate-class", type:"text", style:"margin-left:7px; width:37%;", placeholder: "Class", value:element.class}).appendTo(row);
+
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formDate-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formDate-container").append(container);
+            }
+            if(type=="radio"){
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Radio Button"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            var titleField = $('<input/>',{class:"node-input-formRadio-title", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Title", value:element.title}).appendTo(row);
+            var valueField = $('<input/>',{class:"node-input-formRadio-value", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Default Selection", value:element.value}).appendTo(row);
+            var optValueField = $('<input/>',{class:"node-input-formRadio-optValue", type:"text", style:"margin-left:7px; width:22%;", placeholder: "Options", value:element.optValue}).appendTo(row);
+            var stylesField = $('<input/>',{class:"node-input-formRadio-style", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Style", value:element.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formRadio-class", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Class", value:element.class}).appendTo(row);
+
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formRadio-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formRadio-container").append(container);
+            }          
+            if(type=="checkBox"){
+
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"CheckBox"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            var titleField = $('<input/>',{class:"node-input-formCheckBox-title", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Title", value:element.title}).appendTo(row);
+
+            var defaultSelField = $('<input/>',{class:"node-input-formCheckBox-defaultsel", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Default Selections", value:element.defaultsel}).appendTo(row);
+            var labelField = $('<input/>',{class:"node-input-formCheckBox-label", type:"text", style:"margin-left:7px; width:22%;", placeholder: "Options", value:element.label}).appendTo(row);
+            var stylesField = $('<input/>',{class:"node-input-formCheckBox-style", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Style", value:element.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-formCheckBox-class", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Class", value:element.class}).appendTo(row);
+
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formCheckBox-label").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formCheckBox-container").append(container);
+        }
+            if(type=="upload"){
+
+                console.log("this is upload")
+                        var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+                        var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Upload Button"}).appendTo(container);               
+
+                        var row = $('<div/>').appendTo(container);
+                        var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+                        var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+                        $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+
+                        var labelField = $('<input/>',{class:"node-input-formUploadBtn-label", type:"text", style:"margin-left:7px; width:17%;", placeholder: "Label", value:element.label}).appendTo(row);
+                        var DescriptionField = $('<input/>',{class:"node-input-formUploadBtn-description", type:"text", style:"margin-left:7px; width:17%;", placeholder: "Description", value:element.description}).appendTo(row);
+                        var AcceptField = $('<input/>',{class:"node-input-formUploadBtn-accept", type:"text", style:"margin-left:7px; width:8%;", placeholder: "Accept", value:element.access || "*"}).appendTo(row);
+                        var UploadkeyField = $('<input/>',{class:"node-input-formUploadBtn-uploadkey", type:"text", style:"margin-left:7px; width:9%;", placeholder: "Upload Key", value:element.uploadkey}).appendTo(row);
+
+
+                        var valueClass ="node-input-formUploadBtn-value"
+                        if (!element.value) { valueClass ="node-input-formUploadBtn-value input-error"; }
+
+                        var label = $('<label/>', {for: 'typeField', text: 'Multiple:',style: 'display: inline-block; margin-right: 7px; width: 6%;margin-left: 10px;'}).appendTo(row);
+                        var typeField = $('<select/>',{class:"node-input-formUploadBtn-select",type:"text",style:"margin-left:7px; width:25%"}).appendTo(row);
+
+                        var arr = [
+                        {val : "false", text: "False"},
+                        {val : "true", text: "True"},
+                        ];
+
+                        $(arr).each(function() {
+                            var isSelected= false;
+                            if (element.value == this.val) {
+                                isSelected = true;
+                            }
+                            typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+                               
+                            });
+
+
+                        
+                        var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+                        var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+                        $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+                        deleteButton.click(function() {
+                            container.find(".node-input-formUploadBtn-value").removeAttr('required')
+                            container.css({"background":"#fee"});
+                            container.fadeOut(300, function() {
+                                $(this).remove();
+                            });
+                        });
+
+                        $(".node-input-formUpload-container").append(container);
+                        
+                    }
+            if(type=="download"){
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var labelSpan = $('<span/>',{style:"font-weight: 700;display:block;margin-left:22px;font-size:13px;color:#a1a1a1;margin-top:-6px;",text:"Download Button"}).appendTo(container);               
+
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            
+            var DownloadkeyField = $('<input/>',{class:"node-input-formDownload-downloadkey", type:"text", style:"margin-left:7px; width:16%;", placeholder: "Download Key", value:element.downloadkey}).appendTo(row);
+            var LabelField = $('<input/>',{class:"node-input-formDownload-label", type:"text", style:"margin-left:7px; width:37%;", placeholder: "Label", value:element.label || "Download"}).appendTo(row);
+            var DescriptionField = $('<input/>',{class:"node-input-formDownload-description", type:"text", style:"margin-left:7px; width:33%;", placeholder: "Description", value:element.description}).appendTo(row);
+         
+
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+            deleteButton.click(function() {
+                container.find(".node-input-formDownload-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $(".node-input-formDownload-container").append(container);
+            }
+           
+    }
+
+        function generateMenuButton(i, Button) {
+            var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+            var row = $('<div/>').appendTo(container);
+            var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+            var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+            $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+            var labelField = $('<input/>',{class:"node-input-menuButton-label", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Label", value:Button.label}).appendTo(row);
+            var styleField = $('<input/>',{class:"node-input-menuButton-style", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Style", value:Button.style}).appendTo(row);
+            var classField = $('<input/>',{class:"node-input-menuButton-class", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Class", value:Button.class}).appendTo(row);
+
+            var valueClass ="node-input-menuButton-value"
+            if (!Button.value) { valueClass ="node-input-menuButton-value input-error"; }
+
+
+            var typeField = $('<select/>',{class:"node-input-menuButton-select",type:"text",style:"margin-left:7px; width:25%"}).appendTo(row);
+
+            var arr = [
+                  {val : "Direct Link", text: "Direct Link"},
+                  {val : "Submit", text: "Submit"},
+                  {val : "Submit and Send Data", text: "Submit and Send Data"},
+                  ];
+
+            $(arr).each(function() {
+                var isSelected= false;
+                if (Button.select == this.val) {
+                    isSelected = true;
+                }
+                typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+            });
+
+            var valueField = $('<input/>',{class:valueClass, type:"text", style:"margin-left:7px; width:14%;", placeholder: "Value", value:Button.value}).appendTo(row);
+            valueField.keyup(function() {
+                if ($(this).val() && $(this).hasClass('input-error')) {
+                    $(this).removeClass('input-error')
+                }
+                else {
+                    if (!$(this).val()) {
+                        $(this).addClass('input-error')
+                    }
+                }
+
+            });
+
+
+        
+            var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+            var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+            $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+            deleteButton.click(function() {
+                container.find(".node-input-menuButton-value").removeAttr('required')
+                container.css({"background":"#fee"});
+                container.fadeOut(300, function() {
+                    $(this).remove();
+                });
+            });
+
+            $("#node-input-menubutton-container").append(container);
+            
+        }
+        
+        $("#node-input-add-FormInput").click(function() {
+            var type ="input"
+            generateElement($(".node-input-formInput-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+        $("#node-input-add-Date").click(function() {
+            var type= "date"
+            generateElement($(".node-input-formDate-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+          
+        $("#node-input-add-Radio").click(function() {
+            var type= "radio"
+            generateElement($(".node-input-formRadio-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+        $("#node-input-add-CheckBox").click(function() {
+            var type="checkBox"
+            generateElement($(".node-input-formCheckBox-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+        $("#node-input-add-DropDown").click(function() {
+            var type ="dropDown"
+            generateElement($(".node-input-formDropDown-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+      
+        $("#node-input-add-Btn").click(function() {
+            var type="button"
+            generateElement($(".node-input-formBtn-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+        $("#node-input-add-SwitchBtn").click(function() {
+            var type= "switchBtn"
+            generateElement($(".node-input-formSwitchBtn-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+        $("#node-input-add-menubutton").click(function() {
+            generateMenuButton($("#node-input-menubutton-container").children().length+1, {});
+            $("#node-input-menubutton-container-div").scrollTop($("#node-input-menubutton-container-div").get(0).scrollHeight);
+        });          
+
+        $("#node-input-add-Label").click(function() {
+            var type ="label"
+            generateElement($(".node-input-formLabel-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+        $("#node-input-add-Upload").click(function() {
+            var type ="upload"
+            generateElement($(".node-input-formUpload-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+        $("#node-input-add-Download").click(function() {
+            var type ="download"
+            generateElement($(".node-input-formDownload-container").children().length+1, {},type);
+            $("#node-input-formLabel-container-div").scrollTop($("#node-input-formLabel-container-div").get(0).scrollHeight);
+        });
+
+
+
+
+       for (var i=0; i<this.formElement.length; i++) {            
+          var element = this.formElement[i]; 
+          var type =element.type        
+          if(element.label != undefined || element.value != undefined || element.style != undefined){               
+            generateElement(i+1,element,type);
+          }
+         
+       }  
+
+
+      for (var i=0; i<this.menuButton.length; i++) {               
+          var Button = this.menuButton[i];
+          generateMenuButton(i+1,Button);
+      }
+
+
+        
+        $( ".sortableList" ).sortable({
+            axis: "y",
+            handle:".node-input-option-handle",
+            cursor: "move"
+        });
+  
+        $( "#node-input-menubutton-container" ).sortable({
+            axis: "y",
+            handle:".node-input-option-handle",
+            cursor: "move"
+        });
+    },
+
+    oneditsave: function() {
+  
+        
+        this.dropdownStatus = $("#dropdownStatus").val();
+                 
+        var formElement = $(".node-input-formSwitchBtn-container").children();    
+        var node = this;           
+        node.formElement = [];
+
+        var menuButton = $("#node-input-menubutton-container").children();          
+        var node = this;           
+        node.menuButton = [];
+
+
+        formElement.each(function(i) {
+            var element = $(this);
+    
+            var o = {
+
+
+                type: "switchBtn",
+                label: element.find(".node-input-formSwitchBtn-label").val(),
+                style: element.find(".node-input-formSwitchBtn-style").val(),
+                class: element.find(".node-input-formSwitchBtn-class").val(),
+                value: element.find(".node-input-formSwitchBtn-select").val()
+              
+            };
+            if(o.label != undefined ){
+                node.formElement.push(o);
+            }
+
+             var o = {
+                value:{},
+                style:"",
+                class:"",
+                type: "upload",
+                label: element.find(".node-input-formUploadBtn-label").val(),
+                description: element.find(".node-input-formUploadBtn-description").val(),
+                accept: element.find(".node-input-formUploadBtn-accept").val(),
+                multiple: element.find(".node-input-formUploadBtn-select").val(),
+                uploadkey: element.find(".node-input-formUploadBtn-uploadkey").val(),
+             
+            };
+            if(o.label != undefined ){
+                node.formElement.push(o);
+            }
+            var o = {
+                value:{},
+                style:"",
+                class:"",
+                type: "download",
+                label: element.find(".node-input-formDownload-label").val(),
+                description: element.find(".node-input-formDownload-description").val(),
+                downloadkey: element.find(".node-input-formDownload-downloadkey").val(),
+             
+            };
+            if(o.label != undefined ){
+                node.formElement.push(o);
+            }
+            
+
+            var o = {
+               
+                type: "button",
+                label: element.find(".node-input-formBtn-label").val(),
+                value: element.find(".node-input-formBtn-value").val(),
+                onClick: element.find(".node-input-formBtn-select").val(),
+                select: element.find(".node-input-formBtn-select").val(),
+                style: element.find(".node-input-formBtn-style").val(),
+                class: element.find(".node-input-formBtn-class").val(),
+               
+            };   
+            if (o.onClick == "Direct Link") {
+                    o.href = o.value;
+                    delete o.onClick;
+                    delete o.onClickSend;
+                    } else if (o.onClick == "Submit") {
+                    o.onClick = o.value;
+                    delete o.onClickSend;
+                    delete o.href;
+                    } else if (o.onClick == "Submit and Send Data") {
+                    o.onClickSend = o.value;
+                    delete o.onClick;
+                    delete o.href;}
+          
+            if(o.label != undefined ){
+                node.formElement.push(o);
+            }
+            var o = {
+
+                value: element.find(".node-input-formDropDown-value").val(),
+                type: "dropDown",
+                title: element.find(".node-input-formDropDown-title").val(),
+                opt: element.find(".node-input-formDropDown-opt").val(),
+                style: element.find(".node-input-formDropDown-style").val(),
+                class: element.find(".node-input-formDropDown-class").val(),
+              
+            };
+
+            
+            if(o.value != undefined ){
+                node.formElement.push(o);
+            }
+              
+            var o = {
+             
+                value: element.find(".node-input-inputform-value").val(),
+                type: "input",                   
+                inputType:element.find(".node-input-inputform-type").val(),
+                placeholder:element.find(".node-input-inputform-placeholder").val(),      
+                style : element.find(".node-input-inputform-css").val(),
+                class:element.find(".node-input-inputform-class").val(),
+                
+            };
+            if(o.value != undefined ){
+                node.formElement.push(o);
+            }
+            
+           
+           
+             var o = {
+           
+                           type: "label",
+                           title: element.find(".node-input-formLabel-title").val(),
+                           description: element.find(".node-input-formLabel-description").val(),
+                           style: element.find(".node-input-formLabel-style").val(),
+                           class: element.find(".node-input-formLabel-class").val(),
+                         
+                       };
+           
+                       
+            if(o.style != undefined ){
+                           node.formElement.push(o);
+             }
+             
+           
+           var o = {
+
+               value: element.find(".node-input-formDate-value").val(),
+               type: "date",
+               optValue: element.find(".node-input-formDate-optValue").val(),
+               style: element.find(".node-input-formDate-style").val(),
+               class: element.find(".node-input-formDate-class").val(),
+             
+           };
+
+           
+           if(o.value != undefined ){
+               node.formElement.push(o);
+           }
+
+
+           
+           
+           var o = {
+               title: element.find(".node-input-formRadio-title").val(),
+               value: element.find(".node-input-formRadio-value").val(),
+               type: "radio",
+               optValue: element.find(".node-input-formRadio-optValue").val(),
+               style: element.find(".node-input-formRadio-style").val(),
+               class: element.find(".node-input-formRadio-class").val(),
+             
+           };
+
+           
+           if(o.value != undefined ){
+               node.formElement.push(o);
+           }
+           var o = {
+
+            defaultsel: element.find(".node-input-formCheckBox-defaultsel").val(),
+            type: "checkBox", 
+            title: element.find(".node-input-formCheckBox-title").val(),
+            label: element.find(".node-input-formCheckBox-label").val(),
+            style: element.find(".node-input-formCheckBox-style").val(),
+            class: element.find(".node-input-formCheckBox-class").val(),
+
+            };
+            if(o.label != undefined ){
+            node.formElement.push(o);
+            }
+        });   
+ 
+
+
+ menuButton.each(function(i) {
+            var Button = $(this);
+          
+            var o = {
+               
+                id:"",
+                label: Button.find(".node-input-menuButton-label").val(),
+                style: Button.find(".node-input-menuButton-style").val(),
+                class: Button.find(".node-input-menuButton-class").val(),
+                value: Button.find(".node-input-menuButton-value").val(),
+                onClick: Button.find(".node-input-menuButton-select").val(),
+                select: Button.find(".node-input-menuButton-select").val(),
+               
+            };
+            console.log(o.onClick)               
+            if (o.onClick == "Direct Link") {
+                    o.href = o.value;
+                    delete o.onClick;
+                    delete o.onClickSend;
+                    } else if (o.onClick == "Submit") {
+                    o.onClick = o.value;
+                    delete o.onClickSend;
+                    delete o.href;
+                    } else if (o.onClick == "Submit and Send Data") {
+                    o.onClickSend = o.value;
+                    delete o.onClick;
+                    delete o.href;}
+
+            node.menuButton.push(o);
+        });
+
+
+
+
+
+},
+    
+    
+
+});
+</script>
+
+<style>
+.node-input-formLabel-container li:nth-child(even) {
+background-color: #c5c5c536;
+}
+</style>

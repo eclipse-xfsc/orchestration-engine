@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>uigenerator</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Node-RED uibuilder - Simple Vue3 with new uib client">
+    <link rel="icon" href="gxfs-favicon.svg">
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../uibuilder/vendor/bootstrap-vue/dist/bootstrap-vue.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue.js UI Dashboard</title>
+</head>
+
+<body class="uib">
+    <div id="app">
+        <div class="main-content" ref="thisref">
+            <div class="navMenus" v-if="ui.menu.header">
+                <div class="headerImage" v-if="ui.menu.header.image"> <img class="headerImageSrc" :src="ui.menu.header.image.src" :alt="ui.menu.header.image.alt">
+                </div>
+                <div v-if="ui.menu.header.element_s" class="ui-menu-header-elememt">
+                    <div class="ui-menu-header-elememt-label" v-for="(element, i) in ui.menu.header.element_s" :key="i">
+                        <div v-if="element.href"> <a @click="ButtonClicked('href','headerElement', element.href)">{{
+                                element.label }}</a> </div>
+                        <div v-if="element.onClick"> <a
+                                @click="ButtonClicked('onClick','headerElement', element.onClick)">{{ element.label
+                                }}</a> </div>
+                        <div v-if="element.onClickSend"> <a
+                                @click="ButtonClicked('onClickSend','headerElement', element.onClickSend)">{{
+                                element.label }}</a> </div>
+                    </div>
+                </div>
+                <div v-if="ui.menu.header.button_s" class="ui-menu-header-button">
+                    <div v-for="(button, i) in ui.menu.header.button_s" :key="i">
+                        <!-- <button class="ui-menu-header-button-label" @click="button.onClick">{{ button.label
+                            }}</button> -->
+                        <div v-if="button.href">
+                            <button class="ui-menu-header-button-label" @click="ButtonClicked('href','headerButton', button.href)">{{ button.label }}</button>
+                        </div>
+                        <div v-if="button.onClick">
+                            <button class="ui-menu-header-button-label" @click="ButtonClicked('onClick','headerButton', button.onClick)">{{ button.label }}</button>
+                        </div>
+                        <div v-if="button.onClickSend">
+                            <button class="ui-menu-header-button-label" @click="ButtonClicked('onClickSend','headerButton', button.onClickSend)">{{ button.label }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-title-content">
+                <div class="page-labelTitle">{{ ui.label.title.text }}</div>
+                <div class="page-labelDescription">{{ ui.label.description.text }}</div>
+            </div>
+            <div class="main-container" ref="mainContainer">
+                <div class="ui-content" v-for="(dataset, i) in ui.dataset_s" :key="i">
+                    <div class="activeContent">
+                        <div width="307px" class="ui-content-side" v-if="dataset.setBadge.isActive === true"
+                            ref="sideContainer">
+                            <div class="side-content-active">
+                                <div class="side-content-badge">
+                                    <div radius="44px" class="side-badge-active">
+                                        <div color="fff" class="side-badge-number-active"> {{dataset.setBadge.number }}
+                                        </div>
+                                    </div>
+                                    <div class="badge-title-description">
+                                        <div class="badge-title"> {{dataset.setBadge.title }} </div>
+                                        <div class="badge-description"> {{dataset.setBadge.description }} </div>
+                                    </div>
+                                    <div class="completePoint"></div>
+                                    <div radius="8px" v-if="dataset.setBadge.isComplete.status" class="completed">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div width="633px" height="246px" class="main-content-middle" ref="middleContainer"
+                            :style="getContentStyle(i)" v-if="dataset.setBadge.isActive === true">
+                            <div class="main-content-shadow-form" v-if="dataset.form && !dataset.table">
+                                <div class="formLabel">{{ dataset.form.label.title }}</div>
+                                <div class="formDescription">{{ dataset.form.label.description }}</div>
+                                <div class="form-separate"></div>
+                                <div class="form-detail-padding">
+                                    <div>
+                                        <div v-for="(formelem, i) in dataset.form.element_s" :key="i" class="main-form">
+                                            <div v-if="formelem.type == 'input'" class="main-form">
+                                                <input :type="formelem.options.inputType" :placeholder="formelem.options.placeholder" class="main-input-detail" v-model="formelem.value" required>
+                                                <!-- <a v-if="formelem.options.inputType == 'file' && isFileSelected" v-bind:href="downloadUrl" download>Download</a> -->
+                                            </div>
+                                            <div v-if="formelem.type == 'upload'" class="main-form">
+                                                <div class="upd-labelDescription">{{ formelem.options.description }}
+                                                </div>
+                                                <input type="file" class="updfile" id="file" v-model="formelem.value" name="file" v-on:change="selectFile(formelem,$event)">
+                                                <div class="upd-labelDescription">{{ fileInfo }}</div>
+                                            </div>
+                                            <div v-if="formelem.type == 'download'" class="main-form">
+                                                <div class="dwn-labelDescription">{{ formelem.options.description }}
+                                                </div>
+                                                <div class="input-container">
+                                                    <button class="dwn-button" @click="downloadFile(formelem)" download>{{formelem.options.label}}</button>
+                                                    <div class="form-input">{{formelem.value.name}}</div>
+                                                </div>
+                                            </div>
+                                            <div v-if="formelem.type == 'label'">
+                                                <div class="inner-label-form-content">
+                                                    <div class="formLabel">{{ formelem.options.title}} </div>
+                                                    <div class="form-description">{{ formelem.options.description }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div v-if="formelem.type == 'dropDown'">
+                                                <div class="title-dropdown">{{ formelem.title}}{{ formelem.title ? ':' : '' }}</div>
+                                                <select class="custom-select" v-model="formelem.value" :style="formelem.style" >
+													<option v-for="(item, i) in formelem.options" :key="i" :value="item" class="selected-option"> {{ item }} </option>
+												</select>
+                                            </div>
+                                            <div v-if="formelem.type == 'switchBtn'">
+                                                <div class="main-switch-content">
+                                                    <div class="main-switch-inline">
+                                                        <label class="main-switch-body switch">
+															<input type="checkbox" :value="formelem.value" v-model="formelem.value" class="main-switch-input"> <span class="slider round"></span>
+															<div class="main-switch-label">{{ formelem.label }}</div>
+														</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div v-if="formelem.type == 'radio'">
+                                                <div class="title-radio">{{ formelem.title}}{{ formelem.title ? ':' : '' }}</div>
+                                                <div class="main-radio-content">
+                                                    <div class="main-radio-inline"
+                                                        v-for="(radioButton, i) in formelem.options" key="i">
+                                                        <label class="main-radio-body">
+															<input :value="radioButton" type="radio" v-model="formelem.value" class="main-radio-input">
+															<div class="main-radio-label">{{ radioButton }}</div>
+														</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div v-if="formelem.type == 'checkBox'">
+                                                <div class="title-checkbox">{{ formelem.title}}{{ formelem.title ? ':' : '' }}</div>
+                                                <div class="main-checkbox-content">
+                                                    <div>
+                                                        <div v-for="(option, i) in formelem.options" :key="i">
+                                                            <label>
+																<input type="checkbox" :value="option" v-model="formelem.value[i].check" :id="'option-' + i" @change="updateSelectedOptions()" class="main-checkbox-input"> <span class="main-checkbox-label">{{ option.label }}</span> </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div v-if="formelem.type == 'date'">
+                                                <div class="datepicker">
+                                                    <input type="date" :value="formelem.value" v-model="formelem.value" class="datepicker-input date">
+                                                </div>
+                                            </div>
+                                            <div v-if="formelem.type == 'button'" class="inner-button-space">
+                                                <div v-if="formelem.options.href">
+                                                    <button class="inner-button" @click="ButtonClicked('href','dataset.form.button', formelem.options.href)">{{ formelem.options.label }}</button>
+                                                </div>
+                                                <div v-if="formelem.options.onClick">
+                                                    <button class="inner-button" @click="ButtonClicked('onClick','dataset.form.button', formelem.options.onClick)">{{ formelem.options.label }}</button>
+                                                </div>
+                                                <div v-if="formelem.options.onClickSend">
+                                                    <button class="inner-button" @click="ButtonClicked('onClickSend','dataset.form.button', formelem.options.onClickSend)">{{ formelem.options.label }}</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-content-shadow-table" v-if="dataset.table && dataset.form">
+                                <div class="table-row-header-right-column">
+                                    <div class="main-search">
+                                        <div class="main-search-inside">
+                                            <input type="text" width="800px"
+                                                                        data-tip="Enter search terms and hit Enter" class="input-search" :placeholder="dataset.table.rightSide.placeholder" v-model="searchQuery"
+                                                                        currentitem="false">
+                                            <div data-tip="Search" class="search-image-main" currentitem="false">
+                                                <div radius="46px" class="search-image-inside">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                                        class="search-image">
+                                                        <path
+                                                            d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div height="28px" class="advance-search-label">
+                                            <div color="#000094" data-tip="Search with suggestions" class="advance-inside" currentitem="false">
+                                                {{dataset.table.rightSide.advance}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="services-label">{{ dataset.table.rightSide.servicesTitle }}</div>
+                                    <div v-for="(headers, index) in filteredHeadersRight(dataset.table)" :key="index">
+                                        <!-- <div  v-for="(headers, index) in filteredHeadersRight" :key="index"> -->
+                                        <!-- <div  v-for="(headers, index) in dataset.table.rightSide.headersRight" :key="index"> -->
+                                        <div class="table-row-header-right" @click="toggleCollapseRight(headers)">
+                                            <div class="header-right-left">
+                                                <input type="checkbox" class="checkbox-item">
+                                                <a href="#">
+                                                    <img :src="headers.providerLogo" alt="Provider Logo" class="table-row-logo">
+                                                </a>
+                                            </div>
+                                            <div class="item-column">
+                                                <div class="table-up-item">{{ headers.firstItem }}</div>
+                                                <div class="table-down-item">{{ headers.secondItem }}</div>
+                                            </div>
+                                            <div class="header-right-middle">
+                                                <div v-for="column in headers.columns">
+                                                    <div class="first-item-table">{{ column.title }}</div>
+                                                    <div class="second-item-table">{{ column.value }}</div>
+                                                </div>
+                                            </div>
+                                            <div class="header-right-right" role="button" aria-expanded="false"
+                                                aria-controls="kt_customer_view_detail">
+                                                <div class="detail">Details</div>
+                                                <div class="arrowdown">
+                                                    <svg :class="{ rotate: !headers.collapse, 'rotate-180': headers.collapse }" width="16"
+                                                        height="16" viewBox="0 0 16 16" fill="#000094" style="align-self:center">
+                                                        <path d="M14.8 4L8 9.6 1.2 4 0 5.333 8 12l8-6.667z"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-left-right" :id="'kt_customer_view_details_' + index" v-show="headers.collapse">
+                                            <div class="slider-container">
+                                                <div v-for="(section, sectionIndex) in headers.rightColumnSections" :key="sectionIndex"
+                                                    class="section-border">
+                                                    <div class="inside-right-detail" role="button" aria-expanded="false"
+                                                        aria-controls="kt_customer_view_detail"
+                                                        @click="toggleSectionCollapse(section, sectionIndex)">
+                                                        <div class="inside-header-right-table">{{ section.label }}</div>
+                                                        <div class="arrowdown">
+                                                            <svg :class="{ rotate: !section.collapse, 'rotate-180': section.collapse }" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="#000094" style="align-self:center">
+                                                                <path d="M14.8 4L8 9.6 1.2 4 0 5.333 8 12l8-6.667z"></path>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="inside-right-content" v-show="section.collapse">
+                                                        <div v-if="section.id === 'details'">
+                                                            <div>{{ section.content.description }}</div>
+                                                        </div>
+                                                        <div v-if="section.id === 'screenshots'" class="screenshot-image">
+                                                            <img :src="section.content.image" alt="Screenshot" class="screenshot-image-inside">
+                                                        </div>
+                                                        <div v-if="section.id === 'contact'">
+                            
+                                                            <div class="main-contact" v-show="section.content">
+                                                                <div>
+                                                                    <div class="contact-technical">
+                                                                        <div class="contact-label">Technical phone number</div>
+                                                                        <div class="contact-content">{{ section.content.technicalPhone }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="contact-support">
+                                                                        <div class="contact-label">Support phone number</div>
+                                                                        <div class="contact-content">{{ section.content.supportPhone }}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="contact-technical">
+                                                                        <div class="contact-label">Technical email address</div>
+                                                                        <div class="contact-content">{{ section.content.technicalEmail }}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="contact-support">
+                                                                        <div class="contact-label">Support email address</div>
+                                                                        <div class="contact-content">{{ section.content.supportEmail }}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="main-content-right-side" v-if="dataset.setBadge.isActive === true"
+                                :style="getContentStyle(i)"> <img src="light-50.svg" :alt="Tip" class="tip">
+                                <div class="formLabelRightSide">{{ dataset.setInfo.tipTitle }}</div>
+                                <div class="form-detail-right">
+                                    <div class="formDescription">{{ dataset.setInfo.tipDesc }} </div>
+                                </div>
+                                <button class="summary-button" @click="modalformshow">Summary</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div width="307px" class="ui-content-side" v-else ref="sideContainer">
+                        <div class="side-content-deactive">
+                            <div class="side-content-badge">
+                                <div radius="44px" class="side-badge-deactive">
+                                    <div class="side-badge-number-deactive" color="#2A2A2A"> {{dataset.setBadge.number
+                                        }} </div>
+                                </div>
+                                <div>
+                                    <div class="badge-title-description">
+                                        <div class="badge-title"> {{dataset.setBadge.title }} </div>
+                                        <div class="badge-description"> {{dataset.setBadge.description }} </div>
+                                    </div>
+                                </div>
+                                <div class="completePoint"></div>
+                                <div radius="8px" v-if="dataset.setBadge.isComplete.status" class="notCompleted"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondButton-content">
+                    <div v-for="(dataset, i) in ui.dataset_s" :key="i">
+                        <div v-if="dataset.setBadge.isActive === true">
+                            <div class="second-button-inner">
+                                <div v-for="(second, i) in dataset.setButton_s" :key="i">
+                                    <div v-if="second.href">
+                                        <div class="second-button-label"
+                                            @click="ButtonClicked('href','dataset.button', second.href)">
+                                            {{second.label}}</div>
+                                    </div>
+                                    <div v-if="second.onClick">
+                                        <div class="second-button-label"
+                                            @click="ButtonClicked('onClick','dataset.button', second.onClick)">
+                                            {{second.label}}</div>
+                                    </div>
+                                    <div v-if="second.onClickSend">
+                                        <div class="second-button-label"
+                                            @click="ButtonClicked('onClickSend','dataset.button', second.onClickSend)">
+                                            {{second.label}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-if="ui.menu.footer" class="footer-container" :style="footerTop" ref="footerContainer">
+                <div class="footer-main">
+                    <div v-if="ui.menu.footer.image" class="footer-banner"> <img :src="ui.menu.footer.image.src" :alt="ui.menu.footer.image.alt" class="footerImage">
+                    </div>
+                    <div class="footer-content">
+                        <div class="footer-content-inner">
+                            <div v-if="ui.menu.footer.button_s" v-for="(button, i) in ui.menu.footer.button_s" :key="i">
+                                <div v-if="button.href"> <a
+                                        @click="ButtonClicked('href','footerButton', button.href)">{{ button.label
+                                        }}</a> </div>
+                                <div v-if="button.onClick"> <a
+                                        @click="ButtonClicked('onClick','footerButton', button.onClick)">{{ button.label
+                                        }}</a> </div>
+                                <div v-if="button.onClickSend"> <a
+                                        @click="ButtonClicked('onClickSend','footerButton', button.onClickSend)">{{
+                                        button.label }}</a> </div>
+                            </div>
+                        </div>
+                        <div class="footer-content-inner">
+                            <div v-if="ui.menu.footer.element_s" v-for="(element, i) in ui.menu.footer.element_s"
+                                :key="i">
+                                <div v-if="element.href"> <a
+                                        @click="ButtonClicked('href','footerElement', element.href)">{{ element.label
+                                        }}</a> </div>
+                                <div v-if="element.onClick"> <a
+                                        @click="ButtonClicked('onClick','footerElement', element.onClick)">{{
+                                        element.label }}</a> </div>
+                                <div v-if="element.onClickSend"> <a
+                                        @click="ButtonClicked('onClickSend','footerElement', element.onClickSend)">{{
+                                        element.label }}</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Gaia-X - For business customers only</p>
+                </div>
+            </div>
+            <div :class="loading ? 'transitshow' : 'transit'">
+                <div class="main-modal">
+                    <div class="main-body-modal">
+                        <div class="login-fail-body-modal">
+                            <div class="login-fail-header-modal">{{ warningTitle }}</div>
+                            <div class="login-fail-content-modal">{{ warningDescription }}</div>
+                            <div class="login-fail-footer" @click="closePopUp">
+                                <button class="gaiax-button-modal layout">{{ warningButton }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-modal" v-show="showSummary">
+                <div class="summary-body-modal">
+                    <span class="close" @click="showSummary = false">&times;</span>
+                    <div class="summary-table-container">
+                        <div v-for="(formData, index) in ui.dataset_s" :key="index" ref="summaryTableContainer">
+                            <div class="caption">{{ formData.setBadge.title }} Summary</div>
+                            <table class="summary-table">
+                                
+                                <thead>
+                                    <tr>
+                                        <th class="field">Field</th>
+                                        <th class="value">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="(element, eIndex) in formData.form.element_s" :key="eIndex">
+                                        <td>
+                                            {{ element.options?.placeholder ||
+                                            element.options?.title ||
+                                            element.options?.label ||
+                                            element.label || element.title || element.type || 'Field ' + (eIndex + 1) }}
+                                        </td>
+                                        <td>
+                                            <span v-if="element.type === 'input'">{{ element.value }}</span>
+                                            <span v-if="element.type === 'dropDown'">{{ element.value }}</span>
+                                            <span v-if="element.type === 'radio'">{{ element.value }}</span>
+                                            <span v-if="element.type === 'label'">{{ element.options.title }}</span>
+                                            <span v-if="element.type === 'upload'">{{ element.value.name }}</span>
+                                            <span v-if="element.type === 'download'">{{ element.value.name }}</span>
+                                            <span v-if="element.type === 'switchBtn'">{{ element.value }}</span>
+                                            <span v-if="element.type === 'checkBox'">
+                                                <span v-for="(option, i) in element.options" :key="i" class="option-wrapper">
+                                                    <span v-if="element.value[i].check">
+                                                        {{ option.label }} <span class="check-agree">agree</span><span class="comma">,</span>
+                                                    </span>
+                                                    <span v-else>
+                                                        {{ option.label }} <span class="check-disagree">disagree</span><span class="comma">,</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span v-if="element.type === 'date'">{{ element.value }}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="summary-buttons">
+                        <button class="summary-button" @click="editForm">Edit</button>
+                        <button class="summary-button finalize" @click="finalizeForm" :disabled="!allTablesScrolledToBottom">Finalize</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.global.prod.js"></script>
+        <script src="../uibuilder/uibuilder.iife.min.js"></script>
+        <script src="./index.js"></script>
+</body>
+
+</html>

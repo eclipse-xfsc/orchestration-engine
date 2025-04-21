@@ -1,0 +1,351 @@
+<script type="text/html" data-template-name="GXUI Footer">
+        <div class="form-row">
+            <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name </span></label>
+            <input type="text" id="node-input-name" style="width: calc(100% - 105px)"  placeholder="Name">
+        </div>
+		<div style="width:800px" >           
+            <div class="form-row node-input-menuItem-container-row" style="margin-bottom:0px; width:100%; min-width:520px">
+                <label style="vertical-align:top;"><i class="fa fa-list-alt"></i> <span >Menu Items</label>
+                <div style="display:inline-block; width:86%; border:1px solid #ccc; border-radius:5px; box-sizing:border-box;">
+                  <div class="red-ui-tray-header" style="width:100%; display: inline-block; padding-top:10px; padding-bottom:10px; border-top:0px solid; border-radius:5px 5px 0 0; border-bottom:1px solid #ccc;">
+                    <div style="width:94%; display:inline-block; margin-left:27px">
+                      <div style="width:20%; text-align:center; float:left;">Name</div>
+                      <div style="width:20%; text-align:center; float:left; margin-left:9px">Onclick</div>
+                      <div style="margin-left:7px; width:16%; text-align:center; float:left; margin-left:9px"></div>
+                      <div style="width:12%; text-align:center; float:left;"></div>
+                    </div>
+                  </div>
+                  <div id="node-input-menuItem-container-div" style=" height: 257px; padding: 5px; overflow-y:scroll;">
+                    <ol id="node-input-menuItem-container" style=" list-style-type:none; margin: 0;"></ol>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <a href="#" class="editor-button editor-button-small" id="node-input-add-menuItem" style="margin-top: 4px; margin-left: 103px;"><i class="fa fa-plus"></i> <span >add element</span></a>
+                </div>
+            </div>
+              
+            <div class="form-row node-input-menuButton-container-row" style="margin-bottom:0px; width:100%; min-width:520px">
+                <label style="vertical-align:top;"><i class="fa fa-list-alt"></i> <span>Menu Buttons</span></label>
+                <div style="display:inline-block; width:86%; border:1px solid #ccc; border-radius:5px; box-sizing:border-box;">
+                    <div class="red-ui-tray-header" style="width:100%; display: inline-block; padding-top:10px; padding-bottom:10px; border-top:0px solid; border-radius:5px 5px 0 0; border-bottom:1px solid #ccc;">
+                        <div style="width:94%; display:inline-block; margin-left:27px">
+                            <div style="width:20%; text-align:center; float:left;"><span>Name</span></div>
+                            <div style="width:20%; text-align:center; float:left; margin-left:9px">Onclick</div>
+                            <div style="margin-left:7px; width:16%; text-align:center; float:left; margin-left:9px"></div>
+                            <div style="width:12%; text-align:center; float:left;"></div>
+                        </div>
+                    </div>
+                    <div id="node-input-menuButton-container-div" style=" height: 257px; padding: 5px; overflow-y:scroll;">
+                        <ol id="node-input-menuButton-container" style=" list-style-type:none; margin: 0;"></ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+              <a href="#" class="editor-button editor-button-small" id="node-input-add-menuButton" style="margin-top: 4px; margin-left: 103px;"><i class="fa fa-plus"></i> <span>add element</span></a>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 30px">
+            <div class="form-row" >
+                <label style="width: auto; margin-right: 1px; " for="node-input-action"><i class="fa fa-dot-circle-o"></i> Image Source</label>
+                <input type="text" id="node-input-src" placeholder="Image Src">
+            </div> 
+            <div class="form-row" >
+                <label style="width: auto; margin-right: 1px;" for="node-input-alt"><i class="fa fa-dot-circle-o"></i> Image Alt</label>
+                <input type="text" id="node-input-alt" placeholder="Image Alt">
+            </div>
+            <div class="form-row" >
+                <label style="width: auto; margin-right: 1px;" for="node-input-style"><i class="fa fa-dot-circle-o"></i> Style</label>
+                <input type="text" id="node-input-style" placeholder="Style">
+            </div>
+            <div class="form-row" >
+                <label style="width: auto; margin-right: 1px; padding-bottom: 20px;" for="node-input-class"><i class="fa fa-dot-circle-o"></i> Class</label>
+                <input type="text" id="node-input-class" placeholder="Class">
+            </div>
+        </div>
+        
+    
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('GXUI Footer',{
+        category: 'UI Design',
+        color: '#fcaaff',
+        defaults: {
+           name: {value:""},
+           alt: {value:""},
+           src: {value:""},
+           style: {value:""},
+           class: {value:""},           
+           MenuButton: {value:[{value:'', label :'', type:'', required:true}], validate:function(value) {
+                    if (value.length ) {
+                        for (var i = 0; i < value.length; i++) {
+                            if (!value[i].value) {
+                                return false;
+                            }
+                        }
+                    }
+                    else {
+                        return false;
+                    }
+                    return true;
+                }, required:true},
+            MenuItem: {value:[{value:'', label :'', type:'', required:true}], validate:function(value) {
+                    if (value.length ) {
+                        for (var i = 0; i < value.length; i++) {
+                            if (!value[i].value) {
+                                return false;
+                            }
+                        }
+                    }
+                    else {
+                        return false;
+                    }
+                    return true;
+                }, required:true},
+            },
+         label: function() {
+            function prop2name(type, key) {
+                var result = RED.utils.parseContextKey(key);
+                return type +"." +result.key;
+            }
+            if (this.name) {
+                return this.name;
+            }
+         
+        },  
+        inputs:1,
+        outputs:1,
+        icon: "bridge-dash.svg",
+        
+        oneditprepare: function() {
+
+            function generateMenuItem(i, Item) {
+                var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+                var row = $('<div/>').appendTo(container);
+                var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+                var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+                $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+                var labelField = $('<input/>',{class:"node-input-menuItem-label", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Name", value:Item.label}).appendTo(row);
+                var styleField = $('<input/>',{class:"node-input-menuItem-style", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Style", value:Item.style}).appendTo(row);
+                var classField = $('<input/>',{class:"node-input-menuItem-class", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Class", value:Item.class}).appendTo(row);
+                var valueClass ="node-input-menuItem-value"
+                if (!Item.value) { valueClass ="node-input-menuItem-value input-error"; }
+
+
+                var typeField = $('<select/>',{class:"node-input-menuItem-onClick",type:"text",style:"margin-left:7px; width:25%"}).appendTo(row);
+
+                var arr = [
+                  {val : "Direct Link", text: "Direct Link"},
+                  {val : "Submit", text: "Submit"},
+                  {val : "Submit and Send Data", text: "Submit and Send Data"},
+                  ];
+
+                $(arr).each(function() {
+                    var isSelected = false;
+                    if (Item.type == this.val) {
+                        isSelected = true;
+                    }
+                    typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+                });
+
+                var valueField = $('<input/>',{class:valueClass, type:"text", style:"margin-left:7px; width:14%;", placeholder: "Value", value:Item.value}).appendTo(row);
+                valueField.keyup(function() {
+                    if ($(this).val() && $(this).hasClass('input-error')) {
+                        $(this).removeClass('input-error')
+                    }
+                    else {
+                        if (!$(this).val()) {
+                            $(this).addClass('input-error')
+                        }
+                    }
+
+                });
+    
+
+               var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+                var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+                $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+                deleteButton.click(function() {
+                    container.find(".node-input-menuItem-value").removeAttr('required')
+                    container.css({"background":"#fee"});
+                    container.fadeOut(300, function() {
+                        $(this).remove();
+                    });
+                });
+
+                $("#node-input-menuItem-container").append(container);
+                
+            }
+
+
+            function generateMenuButton(i, Button) {
+                var container = $('<li/>',{style:"margin:0; padding:8px 0px 0px; border-bottom:1px solid #ccc;"});
+                var row = $('<div/>').appendTo(container);
+                var row2 = $('<div/>',{style:"padding-top:5px; padding-left:175px;"}).appendTo(container);
+                var row3 = $('<div/>',{style:"padding-top:5px; padding-left:120px;"}).appendTo(container);
+
+                $('<i style="cursor:move; margin-left:3px;" class="node-input-option-handle fa fa-bars"></i>').appendTo(row);
+
+                var labelField = $('<input/>',{class:"node-input-menuButton-label", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Name", value:Button.label}).appendTo(row);
+                var styleField = $('<input/>',{class:"node-input-menuButton-style", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Style", value:Button.style}).appendTo(row);
+                var classField = $('<input/>',{class:"node-input-menuButton-class", type:"text", style:"margin-left:7px; width:15%;", placeholder: "Class", value:Button.class}).appendTo(row);    
+                var valueClass ="node-input-menuButton-value"
+                if (!Button.value) { valueClass ="node-input-menuButton-value input-error"; }
+
+                var typeField = $('<select/>',{class:"node-input-menuButton-onClick",type:"text",style:"margin-left:7px; width:25%"}).appendTo(row);
+
+                var arr = [
+                  {val : "Direct Link", text: "Direct Link"},
+                  {val : "Submit", text: "Submit"},
+                  {val : "Submit and Send Data", text: "Submit and Send Data"},
+                  ];
+
+                
+                $(arr).each(function() {
+                    var isSelected= false;
+                    if (Button.type == this.val) {
+                        isSelected = true;
+                    }
+                    typeField.append($("<option>").attr('value',this.val).text(this.text).prop('selected',isSelected));
+                });
+
+                var valueField = $('<input/>',{class:valueClass, type:"text", style:"margin-left:7px; width:14%;", placeholder: "Value", value:Button.value}).appendTo(row);
+                valueField.keyup(function() {
+                    if ($(this).val() && $(this).hasClass('input-error')) {
+                        $(this).removeClass('input-error')
+                    }
+                    else {
+                        if (!$(this).val()) {
+                            $(this).addClass('input-error')
+                        }
+                    }
+
+                });
+                var finalspan = $('<div/>',{style:"display:inline-block; width:5%;"}).appendTo(row);
+                var deleteButton = $('<a/>',{href:"#",class:"editor-button", style:"font-size:1.3em; left:45%; position:relative;"}).appendTo(finalspan);
+                $('<i/>',{class:"fa fa-trash-o"}).appendTo(deleteButton);
+
+
+
+                deleteButton.click(function() {
+                    container.find(".node-input-menuButton-value").removeAttr('required')
+                    container.css({"background":"#fee"});
+                    container.fadeOut(300, function() {
+                        $(this).remove();
+                    });
+                });
+
+                $("#node-input-menuButton-container").append(container);
+                
+            }
+
+
+            $("#node-input-add-menuItem").click(function() {
+                generateMenuItem($("#node-input-menuItem-container").children().length+1, {});
+                $("#node-input-menuItem-container-div").scrollTop($("#node-input-menuItem-container-div").get(0).scrollHeight);
+            });
+            $("#node-input-add-menuButton").click(function() {
+                generateMenuButton($("#node-input-menuButton-container").children().length+1, {});
+                $("#node-input-menuButton-container-div").scrollTop($("#node-input-menuButton-container-div").get(0).scrollHeight);
+            });
+            for (var i=0; i<this.MenuButton.length; i++) {
+              
+                var Button = this.MenuButton[i];
+                generateMenuButton(i+1,Button);
+            }
+            for (var i=0; i<this.MenuItem.length; i++) {
+              
+              var Item = this.MenuItem[i];
+              generateMenuItem(i+1,Item);
+          }
+
+            $( "#node-input-menuItem-container" ).sortable({
+                axis: "y",
+                handle:".node-input-option-handle",
+                cursor: "move"
+            });
+            
+            $( "#node-input-menuButton-container" ).sortable({
+                axis: "y",
+                handle:".node-input-option-handle",
+                cursor: "move"
+            });
+        },
+        oneditsave: function() {
+            var MenuButton = $("#node-input-menuButton-container").children();         
+            var node = this;           
+            node.MenuButton = [];
+
+            var MenuItem = $("#node-input-menuItem-container").children();
+            var node1 = this;  
+            node1.MenuItem = [];
+
+
+            MenuButton.each(function(i) {
+                var Button = $(this);
+                var o = {
+                    
+                    label: Button.find(".node-input-menuButton-label").val(),
+                    style:Button.find(".node-input-menuButton-style").val(),
+                    class:Button.find(".node-input-menuButton-class").val(),
+                    value: Button.find(".node-input-menuButton-value").val(),
+                    onClick: Button.find(".node-input-menuButton-onClick").val(),
+                    type: Button.find(".node-input-menuButton-onClick").val(),
+
+                };
+                if (o.onClick == "Direct Link") {
+                    o.href = o.value;
+                    delete o.onClick;
+                    delete o.onClickSend;
+                    } else if (o.onClick == "Submit") {
+                    o.onClick = o.value;
+                    delete o.onClickSend;
+                    delete o.href;
+                    } else if (o.onClick == "Submit and Send Data") {
+                    o.onClickSend = o.value;
+                    delete o.onClick;
+                    delete o.href;}
+            
+                node.MenuButton.push(o);
+            });
+
+            MenuItem.each(function(i) {
+                var Item = $(this);
+                var o = {
+                   
+                    label: Item.find(".node-input-menuItem-label").val(),
+                    style: Item.find(".node-input-menuItem-style").val(),
+                    class: Item.find(".node-input-menuItem-class").val(),
+                    value: Item.find(".node-input-menuItem-value").val(),
+                    onClick: Item.find(".node-input-menuItem-onClick").val(),
+                    type: Item.find(".node-input-menuItem-onClick").val(),
+           
+
+                };
+                if (o.onClick == "Direct Link") {
+                    o.href = o.value;
+                    delete o.onClick;
+                    delete o.onClickSend;
+                    } else if (o.onClick == "Submit") {
+                    o.onClick = o.value;
+                    delete o.onClickSend;
+                    delete o.href;
+                    } else if (o.onClick == "Submit and Send Data") {
+                    o.onClickSend = o.value;
+                    delete o.onClick;
+                    delete o.href;}
+                
+                node1.MenuItem.push(o);
+            });
+        },
+    });
+</script>
+
