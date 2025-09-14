@@ -78,7 +78,7 @@ If you want to run the latest code from git, here's how to get started:
 
         npm start
 		
-5. Launch URL
+5. Launch URL.
 		
 	<http://localhost:1880>
 
