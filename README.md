@@ -83,6 +83,10 @@ If you want to run the latest code from git, here's how to get started:
 	<http://localhost:1880>
 
 
+## Changelogs
+For changelogs please visit [ORCE CHANGELOGS](ORCE+Node-RED-Changelog.md) and [Node-RED CHANGELOGS](node-red-4.0.9/CHANGELOG.md)
+
+
 ## Getting Help
 
 Please note that the XFSC Orchestration Engine project will have continuous updates and improvements to its documentation.
