@@ -1,0 +1,14 @@
+{
+  "name": "node-red-leanea-browser-js",
+  "version": "0.0.2",
+  "description": "Run arbitrary JS in the browser",
+  "dependencies": {
+    "node-red": ">=1.0.0"
+  },
+  "keywords": ["node-red","browser","javascript"],
+  "node-red": {
+    "nodes": {
+      "browser-js": "browser-js.js"
+    }
+  }
+}
