@@ -34,13 +34,13 @@ To deploy the XFSC-ORCE project using Docker, follow these simple steps:
    
    Pull the latest Docker image from Docker Hub:
    ```bash
-   docker pull leanea/xfsc-orce:1.0.0
+   docker pull /xfsc-orce:1.0.0
 
 3. **Run the Container**
    
    Start your container using:
    ```bash
-   docker run -d --name xfsc-orce-instance -p 1880:1880 leanea/xfsc-orce:1.0.0
+   docker run -d --name xfsc-orce-instance -p 1880:1880 /xfsc-orce:1.0.0
 
 4. **Verify Installation**
    
