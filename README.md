@@ -34,13 +34,13 @@ To deploy the XFSC-ORCE project using Docker, follow these simple steps:
    
    Pull the latest Docker image from Docker Hub:
    ```bash
-   docker pull ecofacis/xfsc-orce:2.0.4
+   docker pull ecofacis/xfsc-orce:2.0.3
 
 3. **Run the Container**
    
    Start your container using:
    ```bash
-   docker run -d  -p 1880:1880 -p 8080:8080 ecofacis/xfsc-orce:2.0.4
+   docker run -d  -p 1880:1880 -p 8080:8080 ecofacis/xfsc-orce:2.0.3
 
 4. **Verify Installation**
    
@@ -78,7 +78,7 @@ If you want to run the latest code from git, here's how to get started:
 
         npm start
 		
-5. Launch URL.
+5. Launch URL
 		
 	<http://localhost:1880>
 
