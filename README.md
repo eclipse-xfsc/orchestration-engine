@@ -63,8 +63,8 @@ If you want to run the latest code from git, here's how to get started:
 
 1. Clone the code:
 
-        git clone https://gitlab.eclipse.org/eclipse/xfsc/orce.git
-        cd oaw
+        git clone https://github.com/eclipse-xfsc/orchestration-engine.git
+        cd orchestration-engine/node-red-4.0.9/
 
 2. Install the node-red dependencies
 
