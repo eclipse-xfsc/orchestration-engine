@@ -2,7 +2,7 @@
 
 An improved Low-code Orchestration engine for event-driven applications with added enhancements and features optimized for XFSC Toolbox.
 
-![XFSC Orchestration Engine: Low-code programming for event-driven applications](ORCE_image.png)
+![XFSC Orchestration Engine: Low-code programming for event-driven applications](ORCE_image.jpg)
 
 # About
 
