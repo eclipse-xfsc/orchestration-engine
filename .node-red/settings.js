@@ -422,7 +422,7 @@ module.exports = {
 
 
         page: {
-            title: "FACIS Orchestration Engine (ORCE)",
+            title: "XFSC Orchestration Engine",
             css: [
                 path.join(dataDir, 'guided-style.css'),
                 path.join(dataDir, 'guided-style-dark.css')
